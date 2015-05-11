@@ -40,6 +40,8 @@
 (setq ring-bell-function 'ignore) ;; also annoying square display
 (setq-default truncate-lines t) ;; no wrap text
 
+(setq indent-tabs-mode nil)
+(setq-default c-basic-offset 2)
 (setq-default tab-width 2) ;; default tab width
 (line-number-mode 1) ;; show line number in the mode line.
 (column-number-mode 1) ;; show column number in the mode line.
