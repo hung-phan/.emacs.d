@@ -27,7 +27,11 @@
 (when (not package-archive-contents)
   (package-refresh-contents))
 (defvar colorvisa/packages
-  '(auto-complete       ;; auto complete package
+  '(s                   ;; string processor
+    dash                ;; list collection processor
+
+    smooth-scrolling    ;; smooth scrolling
+    auto-complete       ;; auto complete package
     magit               ;; control git from emacs
     paredit             ;; minor mode for editing parentheses
     yasnippet           ;; code snipppets
@@ -56,6 +60,7 @@
 ;; Extra config
 ;; -----------------------------------------------------------------------------
 (require 'setup-util)
+(require 'setup-defaults)
 
 (require 'setup-appearance)
 (require 'setup-applications)
@@ -64,6 +69,8 @@
 (require 'setup-smex)
 (require 'setup-ido)
 (require 'setup-flx)
-(require 'setup-evil)
 (require 'setup-flycheck)
+(require 'setup-paredit)
+
+(require 'setup-evil)
 (require 'setup-dired)

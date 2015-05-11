@@ -37,14 +37,8 @@
 (setq inhibit-startup-message t) ;; No splash screen
 (setq visible-bell nil) ;; turn off visible bell
 (setq ring-bell-function 'ignore) ;; also annoying square display
-(setq-default truncate-lines t) ;; no wrap text
 
-(setq indent-tabs-mode nil)
-(setq-default c-basic-offset 2)
 (setq-default tab-width 2) ;; default tab width
-(line-number-mode 1) ;; show line number in the mode line.
-(column-number-mode 1) ;; show column number in the mode line.
-(global-linum-mode 1) ;; show line number
 (setq-default cursor-type 'bar)	;; set cursor to a thin vertical line instead of a little box
 (global-hl-line-mode 1)	;; highlight current line
 (setq-default highlight-tabs t) ;; highlight tabulations
