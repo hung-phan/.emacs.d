@@ -45,8 +45,7 @@
 (line-number-mode 1) ;; show line number in the mode line.
 (column-number-mode 1) ;; show column number in the mode line.
 (global-linum-mode 1) ;; show line number
-(setq-default cursor-type 'bar)	;; set cursor to a thin vertical line instead
-;; of a little box
+(setq-default cursor-type 'bar)	;; set cursor to a thin vertical line instead of a little box
 (global-hl-line-mode 1)	;; highlight current line
 (setq-default highlight-tabs t) ;; highlight tabulations
 (setq inhibit-startup-message t) ;; not display welcome message
