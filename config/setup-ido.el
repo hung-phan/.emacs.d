@@ -1,4 +1,3 @@
-(require 'colorvisa-util)
 (require 'ido)
 (require 'ido-ubiquitous)
 (require 'ido-hacks)
@@ -10,8 +9,10 @@
 (ido-everywhere 1)
 (ido-ubiquitous-mode 1)
 
+;; -----------------------------------------------------------------------------
 ;; Set buffer separator in the mini buffer when press C-x b (ido-switch-buffer)
 ;; to new line instead of the character | so that it can be easy to read
+;; -----------------------------------------------------------------------------
 (setq ido-decorations
   '("\n=> " "" "\n" "" "[" "]" " [No match]" " [Matched]" " [Not readable]"
     " [Too big]" " [Confirm]"))
@@ -24,4 +25,4 @@
       ido-handle-duplicate-virtual-buffers 2
       ido-max-prospects 10)
 
-(provide 'colorvisa-ido)
+(provide 'setup-ido)

@@ -54,4 +54,4 @@
 (show-paren-mode 1) ;; highlight matching paren
 (setq-default show-trailing-whitespace t)
 
-(provide 'colorvisa-appearance)
+(provide 'setup-appearance)

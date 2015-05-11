@@ -14,4 +14,4 @@
 (add-hook 'before-save-hook 'whitespace-cleanup)
 (add-hook 'before-save-hook (lambda() (delete-trailing-whitespace)))
 
-(provide 'colorvisa-editing)
+(provide 'setup-editing)

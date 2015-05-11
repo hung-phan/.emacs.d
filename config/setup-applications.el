@@ -11,4 +11,4 @@
 (setq backup-inhibited t)
 (setq auto-save-default nil)
 
-(provide 'colorvisa-applications)
+(provide 'setup-applications)

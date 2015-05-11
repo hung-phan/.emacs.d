@@ -28,25 +28,26 @@
   (package-refresh-contents))
 (defvar colorvisa/packages
   '(auto-complete       ;; auto complete package
-     magit               ;; control git from emacs
-     yasnippet           ;; code snipppets
-     undo-tree           ;; undo tree visualization
-     nyan-mode           ;; nyan nyan
-     evil                ;; evil mode for vim
-     flycheck            ;; on the fly syntax checking
-     flycheck-pos-tip    ;; display flycheck on tooltips
-     flycheck-clojure    ;; display flycheck for clojure
+    magit               ;; control git from emacs
+    paredit             ;; minor mode for editing parentheses
+    yasnippet           ;; code snipppets
+    undo-tree           ;; undo tree visualization
+    nyan-mode           ;; nyan nyan
+    evil                ;; evil mode for vim
+    flycheck            ;; on the fly syntax checking
+    flycheck-pos-tip    ;; display flycheck on tooltips
+    flycheck-clojure    ;; display flycheck for clojure
 
-     sublime-themes      ;; theme
-     flx                 ;; fuzzy matching
-     flx-ido             ;; fuzzy matching for ido
-     ido-ubiquitous      ;; use ido nearly everywhere
-     ido-hacks           ;; ido hack for emacs 24
-     smex                ;; M-x interface with ido style
+    sublime-themes      ;; theme
+    flx                 ;; fuzzy matching
+    flx-ido             ;; fuzzy matching for ido
+    ido-ubiquitous      ;; use ido nearly everywhere
+    ido-hacks           ;; ido hack for emacs 24
+    smex                ;; M-x interface with ido style
 
-     slim-mode           ;; slim support
-     haml-mode           ;; haml support
-     ))
+    slim-mode           ;; slim support
+    haml-mode           ;; haml support
+    ))
 (dolist (p colorvisa/packages)
   (when (not (package-installed-p p))
     (package-install p)))
@@ -54,15 +55,15 @@
 ;; -----------------------------------------------------------------------------
 ;; Extra config
 ;; -----------------------------------------------------------------------------
-(require 'colorvisa-util)
+(require 'setup-util)
 
-(require 'colorvisa-appearance)
-(require 'colorvisa-applications)
-(require 'colorvisa-editing)
+(require 'setup-appearance)
+(require 'setup-applications)
+(require 'setup-editing)
 
-(require 'colorvisa-smex)
-(require 'colorvisa-ido)
-(require 'colorvisa-flx)
-(require 'colorvisa-evil)
-(require 'colorvisa-flycheck)
-(require 'colorvisa-dired)
+(require 'setup-smex)
+(require 'setup-ido)
+(require 'setup-flx)
+(require 'setup-evil)
+(require 'setup-flycheck)
+(require 'setup-dired)

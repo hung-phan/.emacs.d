@@ -8,4 +8,4 @@
 (global-set-key (kbd "M-X") 'smex-major-mode-commands)
 (global-set-key (kbd "C-c C-c M-x") 'execute-extended-command) ;; This is your old M-x.
 
-(provide 'colorvisa-smex)
+(provide 'setup-smex)

@@ -99,4 +99,4 @@
 	(let ((message-log-max nil))
 		(apply #'message args)))
 
-(provide 'colorvisa-util)
+(provide 'setup-util)
