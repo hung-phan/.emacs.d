@@ -24,8 +24,7 @@
 (setq mouse-wheel-follow-mouse 't) ;; scroll window under mouse
 (setq scroll-step 1) ;; keyboard scroll one line at a time
 (dolist (mode '(menu-bar-mode tool-bar-mode scroll-bar-mode))
-  (when (fboundp mode) (funcall mode -1))) ;; Turn off mouse interface early in
-                                           ;; startup to avoid momentary display
+  (when (fboundp mode) (funcall mode -1))) ;; Turn off mouse interface early in startup to avoid momentary display
 
 ;; -----------------------------------------------------------------------------
 ;; nyan-mode
@@ -47,7 +46,7 @@
 (column-number-mode 1) ;; show column number in the mode line.
 (global-linum-mode 1) ;; show line number
 (setq-default cursor-type 'bar)	;; set cursor to a thin vertical line instead
-                                ;; of a little box
+;; of a little box
 (global-hl-line-mode 1)	;; highlight current line
 (setq-default highlight-tabs t) ;; highlight tabulations
 (setq inhibit-startup-message t) ;; not display welcome message
