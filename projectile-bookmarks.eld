@@ -1,1 +1,0 @@
-("~/.emacs.d/" "~/Desktop/workarea/working-on/applied-skills-ror/")
