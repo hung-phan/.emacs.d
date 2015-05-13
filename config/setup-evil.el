@@ -45,7 +45,9 @@ there's a region, all lines that region covers will be duplicated."
 (define-key evil-normal-state-map (kbd "SPC P") 'helm-locate)
 (define-key evil-normal-state-map (kbd "SPC g s") 'magit-status)
 
-(evil-leader/set-key "w" 'save-buffer)
-(evil-leader/set-key "q" 'evil-quit)
+(evil-leader/set-key
+  "w" 'save-buffer
+  "q" 'evil-quit
+  "s" 'projectile-run-async-shell-command-in-root)
 
 (provide 'setup-evil)
