@@ -31,16 +31,18 @@
     dash                ;; list collection processor
 
     smooth-scrolling    ;; smooth scrolling
-    auto-complete       ;; auto complete package
     magit               ;; control git from emacs
     paredit             ;; minor mode for editing parentheses
-    yasnippet           ;; code snipppets
     undo-tree           ;; undo tree visualization
     nyan-mode           ;; nyan nyan
     evil                ;; evil mode for vim
+    evil-leader					;; evil leader
     flycheck            ;; on the fly syntax checking
     flycheck-pos-tip    ;; display flycheck on tooltips
     flycheck-clojure    ;; display flycheck for clojure
+
+    auto-complete       ;; auto complete package
+    yasnippet           ;; code snipppets
 
     sublime-themes      ;; theme
     flx                 ;; fuzzy matching
@@ -51,6 +53,19 @@
 
     slim-mode           ;; slim support
     haml-mode           ;; haml support
+
+    golden-ratio        ;; auto resize window by golden ratio
+
+    helm                ;; incremental completion and selection
+    helm-descbinds      ;; A helm frontend for describe-bindings.
+    helm-projectile     ;; explore large projects
+    helm-flycheck       ;; explore large projects
+    ac-helm
+
+    dired-details       ;; dired enhancement
+    dired-details+
+    dired+
+    dired-rainbow
     ))
 (dolist (p colorvisa/packages)
   (when (not (package-installed-p p))
@@ -63,14 +78,16 @@
 (require 'setup-defaults)
 
 (require 'setup-appearance)
-(require 'setup-applications)
 (require 'setup-editing)
+(require 'setup-mappings)
 
 (require 'setup-smex)
 (require 'setup-ido)
 (require 'setup-flx)
 (require 'setup-flycheck)
 (require 'setup-paredit)
+(require 'setup-golden-ratio)
+(require 'setup-helm)
 
 (require 'setup-evil)
 (require 'setup-dired)

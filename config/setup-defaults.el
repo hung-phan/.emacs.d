@@ -1,9 +1,15 @@
+(require 'setup-util)
+
 ;; -----------------------------------------------------------------------------
 ;; copy from https://github.com/magnars/.emacs.d/blob/master/settings%2Fsane-defaults.el
 ;; -----------------------------------------------------------------------------
 
 ;; Allow pasting selection outside of Emacs
 (setq x-select-enable-clipboard t)
+
+;; Move items to trash when deleting
+(setq delete-by-moving-to-trash t)
+(colorvisa/in '(darwin) (setq trash-directory "~/.Trash/emacs"))
 
 ;; Auto refresh buffers
 (global-auto-revert-mode 1)
@@ -29,6 +35,7 @@
 
 ;; Answering just 'y' or 'n' will do
 (defalias 'yes-or-no-p 'y-or-n-p)
+(defalias 'list-buffers 'ibuffer) ;; always use ibuffer
 
 ;; UTF-8 please
 (setq locale-coding-system 'utf-8) ; pretty
@@ -36,6 +43,11 @@
 (set-keyboard-coding-system 'utf-8) ; pretty
 (set-selection-coding-system 'utf-8) ; please
 (prefer-coding-system 'utf-8) ; with sugar on top
+
+;; Remove all backup files
+(setq make-backup-files nil)
+(setq backup-inhibited t)
+(setq auto-save-default nil)
 
 ;; Show active region
 (transient-mark-mode 1)
@@ -119,13 +131,13 @@
 ;; When popping the mark, continue popping until the cursor actually moves
 ;; Also, if the last command was a copy - skip past all the expand-region cruft.
 (defadvice pop-to-mark-command (around ensure-new-position activate)
-  (let ((p (point)))
-    (when (eq last-command 'save-region-or-current-line)
-      ad-do-it
-      ad-do-it
-      ad-do-it)
-    (dotimes (i 10)
-      (when (= p (point)) ad-do-it))))
+           (let ((p (point)))
+             (when (eq last-command 'save-region-or-current-line)
+               ad-do-it
+               ad-do-it
+               ad-do-it)
+             (dotimes (i 10)
+               (when (= p (point)) ad-do-it))))
 
 ;; Offer to create parent directories if they do not exist
 ;; http://iqbalansari.github.io/blog/2014/12/07/automatically-create-parent-directories-on-visiting-a-new-file-in-emacs/
