@@ -34,6 +34,8 @@
     git-gutter          ;; git gutter
 
     smooth-scrolling    ;; smooth scrolling
+    multiple-cursors
+
     paredit             ;; minor mode for editing parentheses
     undo-tree           ;; undo tree visualization
     nyan-mode           ;; nyan nyan
@@ -55,6 +57,8 @@
 
     slim-mode           ;; slim support
     haml-mode           ;; haml support
+    web-mode
+    org-trello          ;; trello mode
 
     golden-ratio        ;; auto resize window by golden ratio
 
@@ -74,6 +78,8 @@
     cider               ;; clojure repl
 
     shell-command       ;; shell
+
+    robe                ;; ruby
     ))
 (dolist (p colorvisa/packages)
   (when (not (package-installed-p p))
@@ -106,3 +112,4 @@
 (require 'setup-clojure-mode)
 (require 'setup-magit)
 (require 'setup-gitgutter)
+(require 'setup-multiple-cursors)
