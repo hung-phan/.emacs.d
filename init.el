@@ -35,6 +35,7 @@
 
     smooth-scrolling    ;; smooth scrolling
     multiple-cursors
+    ace-jump-mode       ;; fast jump
 
     paredit             ;; minor mode for editing parentheses
     undo-tree           ;; undo tree visualization
@@ -119,3 +120,4 @@
 (require 'setup-magit)
 (require 'setup-gitgutter)
 (require 'setup-multiple-cursors)
+(require 'setup-ace-jump)
