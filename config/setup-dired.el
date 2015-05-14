@@ -1,5 +1,5 @@
 (require 'dash)
-(require 'dired-x)
+(require 'dired)
 (require 'dired-details)
 
 ;; -----------------------------------------------------------------------------

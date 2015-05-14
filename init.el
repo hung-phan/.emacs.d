@@ -41,8 +41,8 @@
     flycheck-pos-tip    ;; display flycheck on tooltips
     flycheck-clojure    ;; display flycheck for clojure
 
-    auto-complete       ;; auto complete package
     yasnippet           ;; code snipppets
+    auto-complete       ;; auto complete package
 
     sublime-themes      ;; theme
     flx                 ;; fuzzy matching
@@ -88,6 +88,7 @@
 (require 'setup-paredit)
 (require 'setup-golden-ratio)
 (require 'setup-helm)
-
 (require 'setup-evil)
 (require 'setup-dired)
+(require 'setup-yasnippet)
+(require 'setup-autocomplete)

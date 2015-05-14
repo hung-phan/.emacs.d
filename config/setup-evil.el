@@ -32,17 +32,31 @@ there's a region, all lines that region covers will be duplicated."
     (end-of-line))
   (newline-and-indent))
 
+(defun evil-indent-left ()
+  "Indent left the current line."
+  (interactive)
+  (indent-rigidly-left-to-tab-stop (line-beginning-position) (line-end-position)))
+
+(defun evil-indent-right ()
+  "Indent right the current line."
+  (interactive)
+  (indent-rigidly-right-to-tab-stop (line-beginning-position) (line-end-position)))
+
 ;; -----------------------------------------------------------------------------
 ;; redefine key
 ;; -----------------------------------------------------------------------------
-(define-key evil-normal-state-map "<" 'indent-rigidly-left-to-tab-stop)
-(define-key evil-normal-state-map ">" 'indent-rigidly-right-to-tab-stop)
+(define-key evil-visual-state-map "<" 'indent-rigidly-left-to-tab-stop)
+(define-key evil-visual-state-map ">" 'indent-rigidly-right-to-tab-stop)
+
 (define-key evil-motion-state-map (kbd "RET") 'open-line-below)
+
+(define-key evil-normal-state-map (kbd "<") 'evil-indent-left)
+(define-key evil-normal-state-map (kbd ">") 'evil-indent-right)
 (define-key evil-normal-state-map (kbd "SPC b") 'ido-switch-buffer)
 (define-key evil-normal-state-map (kbd "SPC B") 'ibuffer)
 (define-key evil-normal-state-map (kbd "SPC d") 'duplicate-current-line-or-region)
 (define-key evil-normal-state-map (kbd "SPC p") 'projectile-find-file)
-(define-key evil-normal-state-map (kbd "SPC P") 'helm-locate)
+(define-key evil-normal-state-map (kbd "SPC P") 'helm-projectile)
 (define-key evil-normal-state-map (kbd "SPC g s") 'magit-status)
 
 (evil-leader/set-key

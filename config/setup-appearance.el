@@ -38,6 +38,7 @@
 (setq visible-bell nil) ;; turn off visible bell
 (setq ring-bell-function 'ignore) ;; also annoying square display
 
+(setq-default indent-tabs-mode nil)
 (setq-default tab-width 2) ;; default tab width
 (setq-default cursor-type 'bar)	;; set cursor to a thin vertical line instead of a little box
 (global-hl-line-mode 1)	;; highlight current line
