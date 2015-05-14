@@ -66,6 +66,10 @@
     dired-details+
     dired+
     dired-rainbow
+
+    clojure-mode
+    clojure-test-mode
+    cider               ;; clojure repl
     ))
 (dolist (p colorvisa/packages)
   (when (not (package-installed-p p))

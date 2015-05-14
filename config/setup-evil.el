@@ -45,11 +45,14 @@ there's a region, all lines that region covers will be duplicated."
 ;; -----------------------------------------------------------------------------
 ;; redefine key
 ;; -----------------------------------------------------------------------------
+(define-key evil-visual-state-map [escape] 'keyboard-quit)
 (define-key evil-visual-state-map "<" 'indent-rigidly-left-to-tab-stop)
 (define-key evil-visual-state-map ">" 'indent-rigidly-right-to-tab-stop)
+(define-key evil-visual-state-map "\C-g" 'evil-normal-state)
 
 (define-key evil-motion-state-map (kbd "RET") 'open-line-below)
 
+(define-key evil-normal-state-map [escape] 'keyboard-quit)
 (define-key evil-normal-state-map (kbd "<") 'evil-indent-left)
 (define-key evil-normal-state-map (kbd ">") 'evil-indent-right)
 (define-key evil-normal-state-map (kbd "SPC b") 'ido-switch-buffer)
@@ -58,6 +61,15 @@ there's a region, all lines that region covers will be duplicated."
 (define-key evil-normal-state-map (kbd "SPC p") 'projectile-find-file)
 (define-key evil-normal-state-map (kbd "SPC P") 'helm-projectile)
 (define-key evil-normal-state-map (kbd "SPC g s") 'magit-status)
+
+;; esc to quit everything
+(define-key minibuffer-local-map [escape] 'minibuffer-keyboard-quit)
+(define-key minibuffer-local-ns-map [escape] 'minibuffer-keyboard-quit)
+(define-key minibuffer-local-completion-map [escape] 'minibuffer-keyboard-quit)
+(define-key minibuffer-local-must-match-map [escape] 'minibuffer-keyboard-quit)
+(define-key minibuffer-local-isearch-map [escape] 'minibuffer-keyboard-quit)
+
+(define-key evil-insert-state-map "\C-g" 'evil-normal-state)
 
 (evil-leader/set-key
   "w" 'save-buffer
