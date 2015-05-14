@@ -1,5 +1,12 @@
+(require 'evil)
+(require 'evil-leader)
+(require 'evil-surround)
+(require 'evil-matchit)
+
 (evil-mode 1)
 (global-evil-leader-mode)
+(global-evil-surround-mode 1)
+(global-evil-matchit-mode 1)
 (evil-leader/set-leader ",")
 
 ;; -----------------------------------------------------------------------------
@@ -74,6 +81,7 @@ there's a region, all lines that region covers will be duplicated."
 (define-key minibuffer-local-isearch-map [escape] 'minibuffer-keyboard-quit)
 
 (define-key evil-insert-state-map "\C-g" 'evil-normal-state)
+(define-key evil-insert-state-map "\C-e" 'evil-end-of-line)
 
 (evil-leader/set-key
   "w" 'save-buffer

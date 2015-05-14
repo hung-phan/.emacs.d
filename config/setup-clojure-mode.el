@@ -1,8 +1,10 @@
+(require 'clojure-mode)
+(require 'clojure-test-mode)
+(require 'cider)
+
 ;; -----------------------------------------------------------------------------
 ;; copy from https://github.com/magnars/.emacs.d/blob/8a66f85685ac8d45915400fbd07118fd9867aa32/settings/setup-clojure-mode.el
 ;; -----------------------------------------------------------------------------
-(require 'clojure-mode)
-
 (defadvice clojure-test-run-tests (before save-first activate)
   (save-buffer))
 

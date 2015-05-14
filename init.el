@@ -39,8 +39,12 @@
     paredit             ;; minor mode for editing parentheses
     undo-tree           ;; undo tree visualization
     nyan-mode           ;; nyan nyan
+
     evil                ;; evil mode for vim
     evil-leader					;; evil leader
+    evil-surround				;; evil  surrond
+    evil-matchit				;; evil matchit
+
     flycheck            ;; on the fly syntax checking
     flycheck-pos-tip    ;; display flycheck on tooltips
     flycheck-clojure    ;; display flycheck for clojure
@@ -51,6 +55,8 @@
     sublime-themes      ;; theme
     flx                 ;; fuzzy matching
     flx-ido             ;; fuzzy matching for ido
+
+    ido                 ;; use ido nearly everywhere
     ido-ubiquitous      ;; use ido nearly everywhere
     ido-hacks           ;; ido hack for emacs 24
     smex                ;; M-x interface with ido style

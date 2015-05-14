@@ -1,3 +1,5 @@
+(require 'yasnippet)
+
 ;; Use only own snippets, do not use bundled ones
 (yas-global-mode 1)
 
