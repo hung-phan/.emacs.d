@@ -1,3 +1,5 @@
+(require 'git-gutter)
+
 (global-git-gutter-mode +1)
 
 ;; Jump to next/previous hunk

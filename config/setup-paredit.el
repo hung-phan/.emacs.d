@@ -36,16 +36,15 @@
 
 (define-key paredit-mode-map (kbd "M-(") 'paredit-wrap-round)
 (define-key paredit-mode-map (kbd "M-)") 'paredit-wrap-round-from-behind)
-(define-key paredit-mode-map (kbd "M-s-8") 'paredit-wrap-square)
-(define-key paredit-mode-map (kbd "M-s-9") 'paredit-wrap-square-from-behind)
-(define-key paredit-mode-map (kbd "M-s-(") 'paredit-wrap-curly)
-(define-key paredit-mode-map (kbd "M-s-)") 'paredit-wrap-curly-from-behind)
+(define-key paredit-mode-map (kbd "M-[") 'paredit-wrap-square)
+(define-key paredit-mode-map (kbd "M-]") 'paredit-wrap-square-from-behind)
+(define-key paredit-mode-map (kbd "M-{") 'paredit-wrap-curly)
+(define-key paredit-mode-map (kbd "M-}") 'paredit-wrap-curly-from-behind)
 
 (define-key paredit-mode-map (kbd "C-w") 'paredit-kill-region-or-backward-word)
-(define-key paredit-mode-map (kbd "M-C-<backspace>") 'backward-kill-sexp)
 
 ;; Change nasty paredit keybindings
-(defvar my-nasty-paredit-keybindings-remappings
+(defvar paredit-keybindings-remappings
   '(("M-s"         "s-s"         paredit-splice-sexp)
     ("M-<up>"      "s-<up>"      paredit-splice-sexp-killing-backward)
     ("M-<down>"    "s-<down>"    paredit-splice-sexp-killing-forward)
@@ -56,7 +55,7 @@
 
 (define-key paredit-mode-map (kbd "s-r") 'paredit-raise-sexp)
 
-(--each my-nasty-paredit-keybindings-remappings
+(--each paredit-keybindings-remappings
   (let ((original (car it))
         (replacement (cadr it))
         (command (car (last it))))
