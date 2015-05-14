@@ -4,9 +4,4 @@
 
 (add-hook 'magit-mode-hook 'magit-load-config-extensions)
 
-(defadvice magit-status (around magit-fullscreen activate)
-  (window-configuration-to-register :magit-fullscreen)
-  ad-do-it
-  (delete-other-windows))
-
 (provide 'setup-magit)
