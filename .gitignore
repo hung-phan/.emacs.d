@@ -5,3 +5,11 @@ eshell
 el-get
 custom.el
 *.elc
+.mc-lists.el
+.smex-items
+ac-comphist.dat
+history
+ido.last
+projectile-bookmarks.eld
+projectile.cache
+recentf
