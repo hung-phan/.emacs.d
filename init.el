@@ -30,8 +30,10 @@
   '(s                   ;; string processor
     dash                ;; list collection processor
 
-    smooth-scrolling    ;; smooth scrolling
     magit               ;; control git from emacs
+    git-gutter          ;; git gutter
+
+    smooth-scrolling    ;; smooth scrolling
     paredit             ;; minor mode for editing parentheses
     undo-tree           ;; undo tree visualization
     nyan-mode           ;; nyan nyan
@@ -96,3 +98,5 @@
 (require 'setup-dired)
 (require 'setup-yasnippet)
 (require 'setup-autocomplete)
+
+(require 'setup-gitgutter)
