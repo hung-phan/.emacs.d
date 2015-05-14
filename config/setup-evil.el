@@ -61,6 +61,9 @@ there's a region, all lines that region covers will be duplicated."
 (define-key evil-normal-state-map (kbd "SPC p") 'projectile-find-file)
 (define-key evil-normal-state-map (kbd "SPC P") 'helm-projectile)
 (define-key evil-normal-state-map (kbd "SPC g s") 'magit-status)
+(define-key evil-normal-state-map (kbd "SPC 1") 'delete-other-windows)
+(define-key evil-normal-state-map (kbd "SPC 2") 'split-window-below)
+(define-key evil-normal-state-map (kbd "SPC 3") 'split-window-right)
 
 ;; esc to quit everything
 (define-key minibuffer-local-map [escape] 'minibuffer-keyboard-quit)
