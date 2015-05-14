@@ -8,6 +8,7 @@
 (global-evil-surround-mode 1)
 (global-evil-matchit-mode 1)
 (evil-leader/set-leader ",")
+(setq evil-magic 'very-magic)
 
 ;; -----------------------------------------------------------------------------
 ;; copy from http://rejeep.github.io/emacs/elisp/2010/03/11/duplicate-current-line-or-region-in-emacs.html
@@ -68,10 +69,12 @@ there's a region, all lines that region covers will be duplicated."
 (define-key evil-normal-state-map (kbd "SPC p") 'projectile-find-file)
 (define-key evil-normal-state-map (kbd "SPC P") 'helm-projectile)
 (define-key evil-normal-state-map (kbd "SPC g s") 'magit-status)
+(define-key evil-normal-state-map (kbd "SPC 0") 'delete-window)
 (define-key evil-normal-state-map (kbd "SPC 1") 'delete-other-windows)
 (define-key evil-normal-state-map (kbd "SPC 2") 'split-window-below)
 (define-key evil-normal-state-map (kbd "SPC 3") 'split-window-right)
 (define-key evil-normal-state-map (kbd "SPC SPC") 'other-window)
+(define-key evil-normal-state-map (kbd "SPC /") 'helm-ag)
 
 ;; esc to quit everything
 (define-key minibuffer-local-map [escape] 'minibuffer-keyboard-quit)
@@ -87,5 +90,17 @@ there's a region, all lines that region covers will be duplicated."
   "w" 'save-buffer
   "q" 'evil-quit
   "s" 'projectile-run-async-shell-command-in-root)
+
+(setq evil-mode-line-format 'before
+      evil-normal-state-tag (propertize "« N »" 'face 'tmtxt/evil-normal-tag)
+      evil-motion-state-tag (propertize "« M »" 'face 'tmtxt/evil-normal-tag)
+      evil-insert-state-tag (propertize "« I »" 'face 'tmtxt/evil-insert-tag)
+      evil-emacs-state-tag (propertize "« E »" 'face 'tmtxt/evil-emacs-tag)
+      evil-visual-state-tag (propertize "« ∞ »" 'face 'tmtxt/evil-visual-tag)
+      evil-motion-state-cursor '(box "YellowGreen")
+      evil-normal-state-cursor '(box "YellowGreen")
+      evil-insert-state-cursor '(bar "White")
+      evil-emacs-state-cursor '(bar "White")
+      evil-visual-state-cursor '(box "#F86155"))
 
 (provide 'setup-evil)

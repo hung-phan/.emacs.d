@@ -35,7 +35,8 @@
 
     smooth-scrolling    ;; smooth scrolling
     multiple-cursors
-    ace-jump-mode       ;; fast jump
+    ace-jump-mode       ;; fast word jump
+    windmove            ;; fast window jum
 
     paredit             ;; minor mode for editing parentheses
     undo-tree           ;; undo tree visualization
@@ -73,6 +74,7 @@
     helm-descbinds      ;; A helm frontend for describe-bindings.
     helm-projectile     ;; explore large projects
     helm-flycheck       ;; explore large projects
+    helm-ag             ;; silver search
     ac-helm
 
     dired-details       ;; dired enhancement
@@ -87,7 +89,10 @@
     shell-command       ;; shell
 
     robe                ;; ruby
+    enh-ruby-mode
+    inf-ruby
     ))
+
 (dolist (p colorvisa/packages)
   (when (not (package-installed-p p))
     (package-install p)))
