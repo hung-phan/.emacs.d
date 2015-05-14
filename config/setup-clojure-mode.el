@@ -9,33 +9,6 @@
 (defadvice nrepl-load-current-buffer (before save-first activate)
   (save-buffer))
 
-(require 'clj-refactor)
-
-(cljr-add-keybindings-with-modifier "C-s-")
-(define-key clj-refactor-map (kbd "C-x C-r") 'cljr-rename-file)
-
-(add-hook 'clojure-mode-hook (lambda () (clj-refactor-mode 1)))
-
-(define-key clojure-mode-map (kbd "C->") 'cljr-thread)
-(define-key clojure-mode-map (kbd "C-<") 'cljr-unwind)
-
-(define-key clojure-mode-map (kbd "s-j") 'clj-jump-to-other-file)
-
-(define-key clojure-mode-map (kbd "C-.") 'clj-hippie-expand-no-case-fold)
-
-(defun clj-hippie-expand-no-case-fold ()
-  (interactive)
-  (let ((old-syntax (char-to-string (char-syntax ?/))))
-    (modify-syntax-entry ?/ " ")
-    (hippie-expand-no-case-fold)
-    (modify-syntax-entry ?/ old-syntax)))
-
-(define-key cider-repl-mode-map (kbd "<home>") nil)
-(define-key cider-repl-mode-map (kbd "C-,") 'complete-symbol)
-(define-key cider-mode-map (kbd "C-,") 'complete-symbol)
-(define-key cider-mode-map (kbd "C-c C-q") 'nrepl-close)
-(define-key cider-mode-map (kbd "C-c C-Q") 'cider-quit)
-
 ;; Indent and highlight more commands
 (put-clojure-indent 'match 'defun)
 

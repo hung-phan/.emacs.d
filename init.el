@@ -72,6 +72,8 @@
     clojure-mode
     clojure-test-mode
     cider               ;; clojure repl
+
+    shell-command       ;; shell
     ))
 (dolist (p colorvisa/packages)
   (when (not (package-installed-p p))
@@ -99,4 +101,8 @@
 (require 'setup-yasnippet)
 (require 'setup-autocomplete)
 
+(require 'setup-shell)
+(require 'setup-ruby-mode)
+(require 'setup-clojure-mode)
+(require 'setup-magit)
 (require 'setup-gitgutter)
