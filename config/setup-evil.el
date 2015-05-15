@@ -12,7 +12,9 @@
 (setq evil-magic 'very-magic)
 
 ;;; default state
-(dolist (mode '(org-mode))
+(dolist (mode '(org-mode
+                eshell-mode
+                shell-mode))
   (add-to-list 'evil-emacs-state-modes mode))
 
 ;; -----------------------------------------------------------------------------

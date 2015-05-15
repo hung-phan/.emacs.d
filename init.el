@@ -82,6 +82,7 @@
     exec-path-from-shell
 
     robe                 ;; ruby
+    rvm
     enh-ruby-mode
     inf-ruby
     ))
