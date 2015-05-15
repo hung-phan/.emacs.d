@@ -10,6 +10,10 @@
 (evil-leader/set-leader ",")
 (setq evil-magic 'very-magic)
 
+;;; default state
+(dolist (mode '(org-mode))
+  (add-to-list 'evil-emacs-state-modes mode))
+
 ;; -----------------------------------------------------------------------------
 ;; copy from http://rejeep.github.io/emacs/elisp/2010/03/11/duplicate-current-line-or-region-in-emacs.html
 ;; -----------------------------------------------------------------------------
@@ -74,7 +78,12 @@ there's a region, all lines that region covers will be duplicated."
 (define-key evil-normal-state-map (kbd "SPC 2") 'split-window-below)
 (define-key evil-normal-state-map (kbd "SPC 3") 'split-window-right)
 (define-key evil-normal-state-map (kbd "SPC SPC") 'other-window)
-(define-key evil-normal-state-map (kbd "SPC /") 'helm-ag)
+(define-key evil-normal-state-map (kbd "SPC /") 'helm-ag-project-root)
+
+(define-key evil-normal-state-map (kbd "SPC n") 'escreen-create-screen)
+(define-key evil-normal-state-map (kbd "SPC k") 'escreen-kill-screen)
+(define-key evil-normal-state-map (kbd "SPC [") 'escreen-goto-prev-screen)
+(define-key evil-normal-state-map (kbd "SPC ]") 'escreen-goto-next-screen)
 
 ;; esc to quit everything
 (define-key minibuffer-local-map [escape] 'minibuffer-keyboard-quit)

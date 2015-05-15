@@ -37,6 +37,7 @@
     multiple-cursors
     ace-jump-mode       ;; fast word jump
     windmove            ;; fast window jum
+    escreen             ;; tab like vim
 
     paredit             ;; minor mode for editing parentheses
     undo-tree           ;; undo tree visualization
@@ -66,6 +67,8 @@
     slim-mode           ;; slim support
     haml-mode           ;; haml support
     web-mode
+
+    org
     org-trello          ;; trello mode
 
     golden-ratio        ;; auto resize window by golden ratio
@@ -126,3 +129,7 @@
 (require 'setup-gitgutter)
 (require 'setup-multiple-cursors)
 (require 'setup-ace-jump)
+(require 'setup-web-mode)
+(require 'setup-escreen)
+
+(provide 'init)
