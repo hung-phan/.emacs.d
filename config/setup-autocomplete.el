@@ -1,8 +1,9 @@
 (require 'yasnippet)
 (require 'company)
 (require 'color)
+(require 'company-tern)
 
-;;; custom color for company-mode
+;; custom color for company-mode
 (let ((bg (face-attribute 'default :background)))
   (custom-set-faces
    `(company-tooltip ((t (:inherit default :background ,(color-lighten-name bg 2)))))
@@ -11,25 +12,19 @@
    `(company-tooltip-selection ((t (:inherit font-lock-function-name-face))))
    `(company-tooltip-common ((t (:inherit font-lock-constant-face))))))
 
-;;; custom company mode
-(setq company-idle-delay 0.1)
+;; custom company mode
+(setq company-idle-delay 0)
+(setq company-minimum-prefix-length 1)
+(setq company-dabbrev-ignore-case t)
+(setq company-dabbrev-downcase nil)
 
-;;; init after load
-(add-hook 'after-init-hook 'global-company-mode)
-
+;; autocomplete list
 (add-to-list 'company-backends 'company-yasnippet t)
 (add-to-list 'company-backends 'company-inf-ruby t)
 (add-to-list 'company-backends 'company-robe t)
+(add-to-list 'company-backends 'company-tern)
 
-(defun company-yasnippet-or-completion ()
-  (interactive)
-  (if (first (yas--current-key))
-    (progn
-      (company-abort)
-      (yas-expand))
-    (company-complete-common)))
-
-(define-key company-active-map (kbd "TAB") 'company-yasnippet-or-completion)
-(define-key company-active-map (kbd "<tab>") 'company-yasnippet-or-completion)
+;; init after load
+(add-hook 'after-init-hook 'global-company-mode)
 
 (provide 'setup-autocomplete)

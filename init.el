@@ -27,72 +27,61 @@
 (when (not package-archive-contents)
   (package-refresh-contents))
 (defvar colorvisa/packages
-  '(s                   ;; string processor
-    dash                ;; list collection processor
+  '(s
+    evil                 ;; evil mode for vim
+    evil-leader          ;; evil leader
+    evil-surround        ;; evil  surrond
+    evil-matchit         ;; evil matchit
 
-    magit               ;; control git from emacs
-    git-gutter          ;; git gutter
+    flycheck             ;; on the fly syntax checking
+    flycheck-pos-tip     ;; display flycheck on tooltips
+    flycheck-clojure     ;; display flycheck for clojure
 
-    smooth-scrolling    ;; smooth scrolling
-    multiple-cursors
-    ace-jump-mode       ;; fast word jump
-    windmove            ;; fast window jum
-    escreen             ;; tab like vim
-    expand-region
+    yasnippet            ;; code snipppets
+    company              ;; auto complete package
 
-    paredit             ;; minor mode for editing parentheses
-    undo-tree           ;; undo tree visualization
-    nyan-mode           ;; nyan nyan
+    tern
+    company-tern
+    js2-mode             ;; improve js editing
 
-    evil                ;; evil mode for vim
-    evil-leader					;; evil leader
-    evil-surround				;; evil  surrond
-    evil-matchit				;; evil matchit
+    sublime-themes       ;; theme
+    flx                  ;; fuzzy matching
+    flx-ido              ;; fuzzy matching for ido
 
-    flycheck            ;; on the fly syntax checking
-    flycheck-pos-tip    ;; display flycheck on tooltips
-    flycheck-clojure    ;; display flycheck for clojure
+    ido                  ;; use ido nearly everywhere
+    ido-ubiquitous       ;; use ido nearly everywhere
+    ido-hacks            ;; ido hack for emacs 24
+    smex                 ;; M-x interface with ido style
 
-    yasnippet           ;; code snipppets
-    company             ;; auto complete package
-
-    sublime-themes      ;; theme
-    flx                 ;; fuzzy matching
-    flx-ido             ;; fuzzy matching for ido
-
-    ido                 ;; use ido nearly everywhere
-    ido-ubiquitous      ;; use ido nearly everywhere
-    ido-hacks           ;; ido hack for emacs 24
-    smex                ;; M-x interface with ido style
-
-    slim-mode           ;; slim support
-    haml-mode           ;; haml support
+    slim-mode            ;; slim support
+    haml-mode            ;; haml support
     web-mode
 
     org
-    org-trello          ;; trello mode
+    org-trello           ;; trello mode
 
-    golden-ratio        ;; auto resize window by golden ratio
+    golden-ratio         ;; auto resize window by golden ratio
 
-    helm                ;; incremental completion and selection
-    helm-descbinds      ;; A helm frontend for describe-bindings.
-    helm-projectile     ;; explore large projects
-    helm-flycheck       ;; explore large projects
-    helm-ag             ;; silver search
+    helm                 ;; incremental completion and selection
+    helm-descbinds       ;; A helm frontend for describe-bindings.
+    helm-projectile      ;; explore large projects
+    helm-flycheck        ;; explore large projects
+    helm-ag              ;; silver search
     ac-helm
 
-    dired-details       ;; dired enhancement
+    dired-details        ;; dired enhancement
     dired-details+
     dired+
     dired-rainbow
 
     clojure-mode
     clojure-test-mode
-    cider               ;; clojure repl
+    cider                ;; clojure repl
 
-    shell-command       ;; shell
+    shell-command        ;; shell
+    exec-path-from-shell
 
-    robe                ;; ruby
+    robe                 ;; ruby
     enh-ruby-mode
     inf-ruby
     ))
@@ -126,6 +115,7 @@
 (require 'setup-shell)
 (require 'setup-ruby-mode)
 (require 'setup-clojure-mode)
+(require 'setup-js-mode)
 (require 'setup-magit)
 (require 'setup-gitgutter)
 (require 'setup-multiple-cursors)

@@ -1,5 +1,8 @@
 (require 'shell-command)
+(require 'exec-path-from-shell)
+
 (shell-command-completion-mode)
+(exec-path-from-shell-initialize)
 
 ;; C-d to kill buffer if process is dead.
 (defun comint-delchar-or-eof-or-kill-buffer (arg)

@@ -94,9 +94,9 @@ there's a region, all lines that region covers will be duplicated."
 ;; redefine key
 ;; -----------------------------------------------------------------------------
 (define-key evil-visual-state-map [escape] 'keyboard-quit)
-(define-key evil-visual-state-map "<" 'indent-rigidly-left-to-tab-stop)
-(define-key evil-visual-state-map ">" 'indent-rigidly-right-to-tab-stop)
-(define-key evil-visual-state-map "\C-g" 'evil-normal-state)
+(define-key evil-visual-state-map (kbd "<") 'indent-rigidly-left-to-tab-stop)
+(define-key evil-visual-state-map (kbd ">") 'indent-rigidly-right-to-tab-stop)
+(define-key evil-visual-state-map (kbd "C-g") 'evil-normal-state)
 (define-key evil-visual-state-map (kbd "J") 'move-region-down)
 (define-key evil-visual-state-map (kbd "K") 'move-region-up)
 
@@ -117,6 +117,8 @@ there's a region, all lines that region covers will be duplicated."
 (define-key evil-normal-state-map (kbd "SPC 3") 'split-window-right)
 (define-key evil-normal-state-map (kbd "SPC SPC") 'other-window)
 (define-key evil-normal-state-map (kbd "SPC /") 'helm-ag-project-root)
+(define-key evil-normal-state-map (kbd "SPC v s") 'git-gutter:stage-hunk)
+(define-key evil-normal-state-map (kbd "SPC v r") 'git-gutter:revert-hunk)
 
 (define-key evil-normal-state-map (kbd "J") 'move-line-down)
 (define-key evil-normal-state-map (kbd "K") 'move-line-up)
@@ -128,13 +130,15 @@ there's a region, all lines that region covers will be duplicated."
 (define-key minibuffer-local-must-match-map [escape] 'minibuffer-keyboard-quit)
 (define-key minibuffer-local-isearch-map [escape] 'minibuffer-keyboard-quit)
 
-(define-key evil-insert-state-map "\C-g" 'evil-normal-state)
-(define-key evil-insert-state-map "\C-e" 'evil-end-of-line)
+(define-key evil-insert-state-map (kbd "C-g") 'evil-normal-state)
+(define-key evil-insert-state-map (kbd "C-e") 'evil-end-of-line)
+(define-key evil-insert-state-map (kbd "C-n") 'company-select-next)
+(define-key evil-insert-state-map (kbd "C-p") 'company-select-previous)
 
 (evil-leader/set-key
-  "w"  'save-buffer
-  "q"  'evil-quit
-  "s"  'projectile-run-async-shell-command-in-root
+  "w" 'save-buffer
+  "q" 'evil-quit
+  "s" 'projectile-run-async-shell-command-in-root
   "=" 'er/expand-region)
 
 (setq evil-mode-line-format 'before
