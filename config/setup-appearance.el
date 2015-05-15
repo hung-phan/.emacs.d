@@ -47,5 +47,6 @@
 (setq uniquify-buffer-name-style 'forward)
 (show-paren-mode 1) ;; highlight matching paren
 (setq-default show-trailing-whitespace t)
+(setq ns-use-native-fullscreen nil) ;; full screen mode
 
 (provide 'setup-appearance)

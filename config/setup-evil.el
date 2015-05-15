@@ -54,6 +54,41 @@ there's a region, all lines that region covers will be duplicated."
   (interactive)
   (indent-rigidly-right-to-tab-stop (line-beginning-position) (line-end-position)))
 
+(defun move-line-up ()
+  "Move up the current line."
+  (interactive)
+  (transpose-lines 1)
+  (forward-line -2)
+  (indent-according-to-mode))
+
+(defun move-line-down ()
+  "Move down the current line."
+  (interactive)
+  (forward-line 1)
+  (transpose-lines 1)
+  (forward-line -1)
+  (indent-according-to-mode))
+
+(defun move-region (start end n)
+  "Move the current region up or down by N lines."
+  (interactive "r\np")
+  (let ((line-text (delete-and-extract-region start end)))
+    (forward-line n)
+    (let ((start (point)))
+      (insert line-text)
+      (setq deactivate-mark nil)
+      (set-mark start))))
+
+(defun move-region-up (start end n)
+  "Move the current line up by N lines."
+  (interactive "r\np")
+  (move-region start end (if (null n) -1 (- n))))
+
+(defun move-region-down (start end n)
+  "Move the current line down by N lines."
+  (interactive "r\np")
+  (move-region start end (if (null n) 1 n)))
+
 ;; -----------------------------------------------------------------------------
 ;; redefine key
 ;; -----------------------------------------------------------------------------
@@ -61,6 +96,8 @@ there's a region, all lines that region covers will be duplicated."
 (define-key evil-visual-state-map "<" 'indent-rigidly-left-to-tab-stop)
 (define-key evil-visual-state-map ">" 'indent-rigidly-right-to-tab-stop)
 (define-key evil-visual-state-map "\C-g" 'evil-normal-state)
+(define-key evil-visual-state-map (kbd "J") 'move-region-down)
+(define-key evil-visual-state-map (kbd "K") 'move-region-up)
 
 (define-key evil-motion-state-map (kbd "RET") 'open-line-below)
 
@@ -80,10 +117,8 @@ there's a region, all lines that region covers will be duplicated."
 (define-key evil-normal-state-map (kbd "SPC SPC") 'other-window)
 (define-key evil-normal-state-map (kbd "SPC /") 'helm-ag-project-root)
 
-(define-key evil-normal-state-map (kbd "SPC n") 'escreen-create-screen)
-(define-key evil-normal-state-map (kbd "SPC k") 'escreen-kill-screen)
-(define-key evil-normal-state-map (kbd "SPC [") 'escreen-goto-prev-screen)
-(define-key evil-normal-state-map (kbd "SPC ]") 'escreen-goto-next-screen)
+(define-key evil-normal-state-map (kbd "J") 'move-line-down)
+(define-key evil-normal-state-map (kbd "K") 'move-line-up)
 
 ;; esc to quit everything
 (define-key minibuffer-local-map [escape] 'minibuffer-keyboard-quit)
