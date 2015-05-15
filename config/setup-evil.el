@@ -134,6 +134,7 @@ there's a region, all lines that region covers will be duplicated."
 (define-key evil-insert-state-map (kbd "C-e") 'evil-end-of-line)
 (define-key evil-insert-state-map (kbd "C-n") 'company-select-next)
 (define-key evil-insert-state-map (kbd "C-p") 'company-select-previous)
+(define-key evil-insert-state-map (kbd "<C-tab>") 'company-yasnippet)
 
 (evil-leader/set-key
   "w" 'save-buffer
