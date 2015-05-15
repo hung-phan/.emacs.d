@@ -2,6 +2,7 @@
 (require 'evil-leader)
 (require 'evil-surround)
 (require 'evil-matchit)
+(require 'expand-region)
 
 (evil-mode 1)
 (global-evil-leader-mode)
@@ -109,7 +110,7 @@ there's a region, all lines that region covers will be duplicated."
 (define-key evil-normal-state-map (kbd "SPC d") 'duplicate-current-line-or-region)
 (define-key evil-normal-state-map (kbd "SPC p") 'projectile-find-file)
 (define-key evil-normal-state-map (kbd "SPC P") 'helm-projectile)
-(define-key evil-normal-state-map (kbd "SPC g s") 'magit-status)
+(define-key evil-normal-state-map (kbd "SPC g") 'magit-status)
 (define-key evil-normal-state-map (kbd "SPC 0") 'delete-window)
 (define-key evil-normal-state-map (kbd "SPC 1") 'delete-other-windows)
 (define-key evil-normal-state-map (kbd "SPC 2") 'split-window-below)
@@ -131,9 +132,10 @@ there's a region, all lines that region covers will be duplicated."
 (define-key evil-insert-state-map "\C-e" 'evil-end-of-line)
 
 (evil-leader/set-key
-  "w" 'save-buffer
-  "q" 'evil-quit
-  "s" 'projectile-run-async-shell-command-in-root)
+  "w"  'save-buffer
+  "q"  'evil-quit
+  "s"  'projectile-run-async-shell-command-in-root
+  "=" 'er/expand-region)
 
 (setq evil-mode-line-format 'before
       evil-normal-state-tag (propertize "« N »" 'face 'tmtxt/evil-normal-tag)

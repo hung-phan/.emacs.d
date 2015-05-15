@@ -38,6 +38,7 @@
     ace-jump-mode       ;; fast word jump
     windmove            ;; fast window jum
     escreen             ;; tab like vim
+    expand-region
 
     paredit             ;; minor mode for editing parentheses
     undo-tree           ;; undo tree visualization
@@ -53,7 +54,7 @@
     flycheck-clojure    ;; display flycheck for clojure
 
     yasnippet           ;; code snipppets
-    auto-complete       ;; auto complete package
+    company             ;; auto complete package
 
     sublime-themes      ;; theme
     flx                 ;; fuzzy matching
