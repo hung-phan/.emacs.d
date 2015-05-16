@@ -43,6 +43,7 @@
     tern
     company-tern
     js2-mode             ;; improve js editing
+    nodejs-repl
 
     sublime-themes       ;; theme
     flx                  ;; fuzzy matching
@@ -55,6 +56,7 @@
 
     slim-mode            ;; slim support
     haml-mode            ;; haml support
+    scss-mode            ;; scss support
     web-mode
 
     org
@@ -72,6 +74,7 @@
     dired-details        ;; dired enhancement
     dired-details+
     dired+
+    dired-hacks-utils
     dired-rainbow
 
     clojure-mode
@@ -108,7 +111,6 @@
 (require 'setup-paredit)
 (require 'setup-golden-ratio)
 (require 'setup-helm)
-(require 'setup-evil)
 (require 'setup-dired)
 (require 'setup-yasnippet)
 (require 'setup-autocomplete)
@@ -117,11 +119,12 @@
 (require 'setup-ruby-mode)
 (require 'setup-clojure-mode)
 (require 'setup-js-mode)
+(require 'setup-web-mode)
 (require 'setup-magit)
 (require 'setup-gitgutter)
 (require 'setup-multiple-cursors)
 (require 'setup-ace-jump)
-(require 'setup-web-mode)
 (require 'setup-escreen)
+(require 'setup-evil)
 
 (provide 'init)

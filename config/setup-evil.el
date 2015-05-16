@@ -92,6 +92,24 @@ there's a region, all lines that region covers will be duplicated."
   (interactive "r\np")
   (move-region start end (if (null n) 1 n)))
 
+(defun smart-send-command-to-repl ()
+  (interactive)
+  (cond ((eq major-mode 'js-mode)
+         (if (region-active-p)
+           (send-region-to-nodejs-repl-process (region-beginning) (region-end))
+           (send-region-to-nodejs-repl-process (line-beginning-position) (+ 1 (line-end-position)))))
+
+        ((or (eq major-mode 'enh-ruby-mode) (eq major-mode 'ruby-mode))
+         (if (region-active-p)
+           (ruby-send-region (region-beginning) (region-end))
+           (ruby-send-region (line-beginning-position) (+ 1 (line-end-position)))))
+
+        ((eq major-mode 'clojure-mode))
+         (if (region-active-p)
+           (cider-eval-region (region-beginning) (region-end))
+           (cider-eval-region (line-beginning-position) (+ 1 (line-end-position)))))
+  )
+
 ;; -----------------------------------------------------------------------------
 ;; redefine key
 ;; -----------------------------------------------------------------------------
@@ -142,14 +160,16 @@ there's a region, all lines that region covers will be duplicated."
   "w" 'save-buffer
   "q" 'evil-quit
   "s" 'projectile-run-async-shell-command-in-root
+  "e" 'smart-send-command-to-repl
+  "c" 'inf-ruby-console-auto
   "=" 'er/expand-region)
 
 (setq evil-mode-line-format 'before
-      evil-normal-state-tag (propertize "« N »" 'face 'tmtxt/evil-normal-tag)
-      evil-motion-state-tag (propertize "« M »" 'face 'tmtxt/evil-normal-tag)
-      evil-insert-state-tag (propertize "« I »" 'face 'tmtxt/evil-insert-tag)
-      evil-emacs-state-tag (propertize "« E »" 'face 'tmtxt/evil-emacs-tag)
-      evil-visual-state-tag (propertize "« ∞ »" 'face 'tmtxt/evil-visual-tag)
+      evil-normal-state-tag (propertize "« NORMAL »" 'face 'colorvisa/evil-normal-tag)
+      evil-motion-state-tag (propertize "« MOTION »" 'face 'colorvisa/evil-normal-tag)
+      evil-insert-state-tag (propertize "« INSERT »" 'face 'colorvisa/evil-insert-tag)
+      evil-emacs-state-tag (propertize "« EMACS »" 'face 'colorvisa/evil-emacs-tag)
+      evil-visual-state-tag (propertize "« ∞ »" 'face 'colorvisa/evil-visual-tag)
       evil-motion-state-cursor '(box "YellowGreen")
       evil-normal-state-cursor '(box "YellowGreen")
       evil-insert-state-cursor '(bar "White")
