@@ -104,11 +104,14 @@ there's a region, all lines that region covers will be duplicated."
            (ruby-send-region (region-beginning) (region-end))
            (ruby-send-region (line-beginning-position) (+ 1 (line-end-position)))))
 
-        ((eq major-mode 'clojure-mode))
-         (if (region-active-p)
-           (cider-eval-region (region-beginning) (region-end))
-           (cider-eval-region (line-beginning-position) (+ 1 (line-end-position)))))
-  )
+        ((eq major-mode 'clojure-mode)
+         (cider-eval-last-sexp))))
+
+(defun smart-start-repl ()
+  (interactive)
+  (cond ((eq major-mode 'js-mode) (nodejs-repl))
+        ((or (eq major-mode 'enh-ruby-mode) (eq major-mode 'ruby-mode)) (inf-ruby-console-auto))
+        ((eq major-mode 'clojure-mode) (cider-jack-in))))
 
 ;; -----------------------------------------------------------------------------
 ;; redefine key
@@ -161,7 +164,7 @@ there's a region, all lines that region covers will be duplicated."
   "q" 'evil-quit
   "s" 'projectile-run-async-shell-command-in-root
   "e" 'smart-send-command-to-repl
-  "c" 'inf-ruby-console-auto
+  "c" 'smart-start-repl
   "=" 'er/expand-region)
 
 (setq evil-mode-line-format 'before
