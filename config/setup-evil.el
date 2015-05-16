@@ -96,16 +96,18 @@ there's a region, all lines that region covers will be duplicated."
   (interactive)
   (cond ((eq major-mode 'js-mode)
          (if (region-active-p)
-           (send-region-to-nodejs-repl-process (region-beginning) (region-end))
-           (send-region-to-nodejs-repl-process (line-beginning-position) (+ 1 (line-end-position)))))
+             (send-region-to-nodejs-repl-process (region-beginning) (region-end))
+             (send-region-to-nodejs-repl-process (line-beginning-position) (+ 1 (line-end-position)))))
 
         ((or (eq major-mode 'enh-ruby-mode) (eq major-mode 'ruby-mode))
          (if (region-active-p)
-           (ruby-send-region (region-beginning) (region-end))
-           (ruby-send-region (line-beginning-position) (+ 1 (line-end-position)))))
+             (ruby-send-region (region-beginning) (region-end))
+             (ruby-send-region (line-beginning-position) (+ 1 (line-end-position)))))
 
         ((eq major-mode 'clojure-mode)
-         (cider-eval-last-sexp))))
+         (if (region-active-p)
+             (cider-eval-region (region-beginning) (region-end))
+             (cider-eval-region (line-beginning-position) (+ 1 (line-end-position)))))))
 
 (defun smart-start-repl ()
   (interactive)
