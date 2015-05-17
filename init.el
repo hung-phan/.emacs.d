@@ -26,8 +26,25 @@
 ;; -----------------------------------------------------------------------------
 (when (not package-archive-contents)
   (package-refresh-contents))
+
 (defvar colorvisa/packages
   '(s
+    dash                 ;; list collection processor
+
+    magit                ;; control git from emacs
+    git-gutter           ;; git gutter
+
+    smooth-scrolling     ;; smooth scrolling
+    multiple-cursors
+    ace-jump-mode        ;; fast word jump
+    windmove             ;; fast window jum
+    escreen              ;; tab like vim
+    undo-tree
+    expand-region
+
+    paredit              ;; minor mode for editing parentheses
+    nyan-mode            ;; nyan nyan
+
     evil                 ;; evil mode for vim
     evil-leader          ;; evil leader
     evil-surround        ;; evil  surrond
@@ -88,6 +105,8 @@
     rvm
     enh-ruby-mode
     inf-ruby
+
+    list-processes+
     ))
 
 (dolist (p colorvisa/packages)
@@ -125,6 +144,7 @@
 (require 'setup-multiple-cursors)
 (require 'setup-ace-jump)
 (require 'setup-escreen)
+(require 'setup-undo-tree)
 (require 'setup-evil)
 
 (provide 'init)

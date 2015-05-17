@@ -101,11 +101,6 @@
 ;; Fontify org-mode code blocks
 (setq org-src-fontify-natively t)
 
-;; Represent undo-history as an actual tree (visualize with C-x u)
-(setq undo-tree-mode-lighter "")
-(require 'undo-tree)
-(global-undo-tree-mode)
-
 ;; Sentences do not need double spaces to end. Period.
 (set-default 'sentence-end-double-space nil)
 

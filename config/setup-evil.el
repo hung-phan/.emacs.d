@@ -13,6 +13,7 @@
 
 ;;; default state
 (dolist (mode '(org-mode
+                process-menu-mode
                 eshell-mode
                 shell-mode))
   (add-to-list 'evil-emacs-state-modes mode))
@@ -94,7 +95,7 @@ there's a region, all lines that region covers will be duplicated."
 
 (defun smart-send-command-to-repl ()
   (interactive)
-  (cond ((eq major-mode 'js-mode)
+  (cond ((eq major-mode 'js2-mode)
          (if (region-active-p)
              (send-region-to-nodejs-repl-process (region-beginning) (region-end))
              (send-region-to-nodejs-repl-process (line-beginning-position) (+ 1 (line-end-position)))))
@@ -111,7 +112,7 @@ there's a region, all lines that region covers will be duplicated."
 
 (defun smart-start-repl ()
   (interactive)
-  (cond ((eq major-mode 'js-mode) (nodejs-repl))
+  (cond ((eq major-mode 'js2-mode) (nodejs-repl))
         ((or (eq major-mode 'enh-ruby-mode) (eq major-mode 'ruby-mode)) (inf-ruby-console-auto))
         ((eq major-mode 'clojure-mode) (cider-jack-in))))
 
@@ -130,6 +131,7 @@ there's a region, all lines that region covers will be duplicated."
 (define-key evil-normal-state-map [escape] 'keyboard-quit)
 (define-key evil-normal-state-map (kbd "<") 'evil-indent-left)
 (define-key evil-normal-state-map (kbd ">") 'evil-indent-right)
+(define-key evil-normal-state-map (kbd ";") 'evil-join)
 (define-key evil-normal-state-map (kbd "SPC b") 'ido-switch-buffer)
 (define-key evil-normal-state-map (kbd "SPC B") 'ibuffer)
 (define-key evil-normal-state-map (kbd "SPC d") 'duplicate-current-line-or-region)
