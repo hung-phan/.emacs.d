@@ -113,7 +113,10 @@ there's a region, all lines that region covers will be duplicated."
 (defun smart-start-repl ()
   (interactive)
   (cond ((eq major-mode 'js2-mode) (nodejs-repl))
-        ((or (eq major-mode 'enh-ruby-mode) (eq major-mode 'ruby-mode)) (inf-ruby-console-auto))
+        ((or (eq major-mode 'enh-ruby-mode) (eq major-mode 'ruby-mode))
+         (progn
+           (inf-ruby-console-auto)
+           (robe-start)))
         ((eq major-mode 'clojure-mode) (cider-jack-in))))
 
 ;; -----------------------------------------------------------------------------
