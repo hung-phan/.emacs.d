@@ -105,8 +105,6 @@
     rvm
     enh-ruby-mode
     inf-ruby
-
-    list-processes+
     ))
 
 (dolist (p colorvisa/packages)
