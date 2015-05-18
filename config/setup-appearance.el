@@ -32,6 +32,12 @@
 (colorvisa/set-up 'nyan-mode (nyan-mode 1) (setq nyan-bar-length 15))
 
 ;; -----------------------------------------------------------------------------
+;; rainbow-delimiters mode
+;; -----------------------------------------------------------------------------
+(require 'rainbow-delimiters)
+(add-hook 'prog-mode-hook #'rainbow-delimiters-mode)
+
+;; -----------------------------------------------------------------------------
 ;; minor config
 ;; -----------------------------------------------------------------------------
 (setq inhibit-startup-message t) ;; No splash screen

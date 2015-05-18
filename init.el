@@ -42,6 +42,9 @@
     undo-tree
     expand-region
 
+    rainbow-mode
+    rainbow-delimiters
+
     paredit              ;; minor mode for editing parentheses
     nyan-mode            ;; nyan nyan
 
@@ -61,6 +64,7 @@
     company-tern
     js2-mode             ;; improve js editing
     nodejs-repl
+    jsx-mode
 
     sublime-themes       ;; theme
     flx                  ;; fuzzy matching

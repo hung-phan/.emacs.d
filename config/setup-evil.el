@@ -15,7 +15,10 @@
 (dolist (mode '(org-mode
                 process-menu-mode
                 eshell-mode
-                shell-mode))
+                shell-mode
+                cider-repl-mode
+                inf-ruby-mode
+                nodejs-repl-mode))
   (add-to-list 'evil-emacs-state-modes mode))
 
 ;; -----------------------------------------------------------------------------
@@ -161,7 +164,8 @@ there's a region, all lines that region covers will be duplicated."
 (define-key minibuffer-local-isearch-map [escape] 'minibuffer-keyboard-quit)
 
 (define-key evil-insert-state-map (kbd "C-g") 'evil-normal-state)
-(define-key evil-insert-state-map (kbd "C-e") 'evil-end-of-line)
+(define-key evil-insert-state-map (kbd "C-a") 'evil-insert-line)
+(define-key evil-insert-state-map (kbd "C-e") 'move-end-of-line)
 (define-key evil-insert-state-map (kbd "C-n") 'company-select-next)
 (define-key evil-insert-state-map (kbd "C-p") 'company-select-previous)
 (define-key evil-insert-state-map (kbd "<C-tab>") 'company-yasnippet)
