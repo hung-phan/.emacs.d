@@ -71,9 +71,12 @@
              (ruby-send-region (line-beginning-position) (+ 1 (line-end-position)))))
 
         ((eq major-mode 'clojure-mode)
-         (if (region-active-p)
-             (cider-eval-region (region-beginning) (region-end))
-             (cider-eval-region (line-beginning-position) (+ 1 (line-end-position)))))))
+         (progn
+           (if (region-active-p)
+             (cider-insert-region-in-repl (region-beginning) (region-end))
+             (cider-insert-region-in-repl (line-beginning-position) (+ 1 (line-end-position))))
+           (cider-repl-return)
+           (cider-switch-to-last-clojure-buffer)))))
 
 (defun smart-start-repl ()
   (interactive)
