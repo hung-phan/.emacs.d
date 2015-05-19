@@ -43,7 +43,6 @@
 (setq inhibit-startup-message t) ;; No splash screen
 (setq visible-bell nil) ;; turn off visible bell
 (setq ring-bell-function 'ignore) ;; also annoying square display
-
 (setq-default indent-tabs-mode nil)
 (setq-default tab-width 2) ;; default tab width
 (setq-default cursor-type 'bar)	;; set cursor to a thin vertical line instead of a little box
@@ -54,5 +53,7 @@
 (show-paren-mode 1) ;; highlight matching paren
 (setq-default show-trailing-whitespace t)
 (setq ns-use-native-fullscreen nil) ;; full screen mode
+(setq tab-always-indent 'complete)
+(setq inhibit-startup-screen t)
 
 (provide 'setup-appearance)

@@ -6,6 +6,10 @@
 (define-key global-map (kbd "<f7>") 'escreen-goto-prev-screen)
 (define-key global-map (kbd "<f8>") 'escreen-goto-next-screen)
 
+;; Font size
+(global-set-key (kbd "C-+") 'text-scale-increase)
+(global-set-key (kbd "C--") 'text-scale-decrease)
+
 (windmove-default-keybindings)
 
 (provide 'setup-mappings)

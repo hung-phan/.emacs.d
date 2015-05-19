@@ -41,6 +41,7 @@
     escreen              ;; tab like vim
     undo-tree
     expand-region
+    move-text
 
     rainbow-mode
     rainbow-delimiters

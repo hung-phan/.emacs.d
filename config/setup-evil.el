@@ -58,41 +58,6 @@
   (interactive)
   (indent-rigidly-right-to-tab-stop (line-beginning-position) (line-end-position)))
 
-(defun move-line-up ()
-  "Move up the current line."
-  (interactive)
-  (transpose-lines 1)
-  (forward-line -2)
-  (indent-according-to-mode))
-
-(defun move-line-down ()
-  "Move down the current line."
-  (interactive)
-  (forward-line 1)
-  (transpose-lines 1)
-  (forward-line -1)
-  (indent-according-to-mode))
-
-(defun move-region (start end n)
-  "Move the current region up or down by N lines."
-  (interactive "r\np")
-  (let ((line-text (delete-and-extract-region start end)))
-    (forward-line n)
-    (let ((start (point)))
-      (insert line-text)
-      (setq deactivate-mark nil)
-      (set-mark start))))
-
-(defun move-region-up (start end n)
-  "Move the current line up by N lines."
-  (interactive "r\np")
-  (move-region start end (if (null n) -1 (- n))))
-
-(defun move-region-down (start end n)
-  "Move the current line down by N lines."
-  (interactive "r\np")
-  (move-region start end (if (null n) 1 n)))
-
 (defun smart-send-command-to-repl ()
   (interactive)
   (cond ((eq major-mode 'js2-mode)
@@ -126,8 +91,8 @@
 (define-key evil-visual-state-map (kbd "<") 'indent-rigidly-left-to-tab-stop)
 (define-key evil-visual-state-map (kbd ">") 'indent-rigidly-right-to-tab-stop)
 (define-key evil-visual-state-map (kbd "C-g") 'evil-normal-state)
-(define-key evil-visual-state-map (kbd "J") 'move-region-down)
-(define-key evil-visual-state-map (kbd "K") 'move-region-up)
+(define-key evil-visual-state-map (kbd "J") 'move-text-down)
+(define-key evil-visual-state-map (kbd "K") 'move-text-up)
 
 (define-key evil-motion-state-map (kbd "RET") 'open-line-below)
 
@@ -151,9 +116,8 @@
 (define-key evil-normal-state-map (kbd "SPC /") 'helm-ag-project-root)
 (define-key evil-normal-state-map (kbd "SPC v s") 'git-gutter:stage-hunk)
 (define-key evil-normal-state-map (kbd "SPC v r") 'git-gutter:revert-hunk)
-
-(define-key evil-normal-state-map (kbd "J") 'move-line-down)
-(define-key evil-normal-state-map (kbd "K") 'move-line-up)
+(define-key evil-normal-state-map (kbd "J") 'move-text-down)
+(define-key evil-normal-state-map (kbd "K") 'move-text-up)
 
 ;; esc to quit everything
 (define-key minibuffer-local-map [escape] 'minibuffer-keyboard-quit)
