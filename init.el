@@ -48,6 +48,8 @@
     paredit              ;; minor mode for editing parentheses
     nyan-mode            ;; nyan nyan
 
+    god-mode
+    evil-god-state
     evil                 ;; evil mode for vim
     evil-leader          ;; evil leader
     evil-surround        ;; evil  surrond
@@ -148,5 +150,6 @@
 (require 'setup-escreen)
 (require 'setup-undo-tree)
 (require 'setup-evil)
+(require 'setup-god-mode)
 
 (provide 'init)
