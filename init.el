@@ -112,6 +112,9 @@
     rvm
     enh-ruby-mode
     inf-ruby
+
+    markdown-mode        ;; markdown
+    markdown-mode+
     ))
 
 (dolist (p colorvisa/packages)
@@ -125,7 +128,6 @@
 (require 'setup-defaults)
 
 (require 'setup-appearance)
-(require 'setup-editing)
 (require 'setup-mappings)
 
 (require 'setup-smex)
@@ -152,5 +154,7 @@
 (require 'setup-undo-tree)
 (require 'setup-evil)
 (require 'setup-god-mode)
+
+(require 'setup-editing)
 
 (provide 'init)
