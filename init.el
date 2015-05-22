@@ -28,26 +28,25 @@
   (package-refresh-contents))
 
 (defvar colorvisa/packages
-  '(s
+  '(s                    ;; string processing
     dash                 ;; list collection processor
 
     magit                ;; control git from emacs
     git-gutter           ;; git gutter
 
-    smooth-scrolling     ;; smooth scrolling
-    multiple-cursors
-    ace-jump-mode        ;; fast word jump
     windmove             ;; fast window jum
-    escreen              ;; tab like vim
-    undo-tree
-    expand-region
-    move-text
-
-    rainbow-mode
-    rainbow-delimiters
-
-    paredit              ;; minor mode for editing parentheses
+    escreen              ;; multiple tab like vim
+    undo-tree            ;; undo tree visualization
     nyan-mode            ;; nyan nyan
+
+    rainbow-mode         ;; color visualization
+    rainbow-delimiters   ;; colorful bracket
+
+    ace-jump-mode        ;; fast word jump
+    multiple-cursors     ;; multiple cursor support
+    move-text            ;; move text util
+    expand-region        ;; fast select
+    paredit              ;; minor mode for editing parentheses
 
     god-mode
     evil-god-state
@@ -128,10 +127,9 @@
 ;; Extra config
 ;; -----------------------------------------------------------------------------
 (require 'setup-util)
-(require 'setup-defaults)
 
-(require 'setup-appearance)
-(require 'setup-mappings)
+(require 'setup-defaults)
+(require 'setup-custom)
 
 (require 'setup-smex)
 (require 'setup-ido)
@@ -159,5 +157,6 @@
 (require 'setup-god-mode)
 
 (require 'setup-editing)
+(require 'setup-mappings)
 
 (provide 'init)

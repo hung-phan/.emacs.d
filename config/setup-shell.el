@@ -24,6 +24,11 @@
           (lambda ()
             (define-key shell-mode-map (kbd "C-d") 'comint-delchar-or-eof-or-kill-buffer)))
 
+(add-hook 'term-mode-hook
+          (lambda ()
+            (setq term-buffer-maximum-size 10000)
+            (setq show-trailing-whitespace nil)))
+
 (defun create-shell ()
     "creates a shell with a given name"
     (interactive);; "Prompt\n shell name:")
