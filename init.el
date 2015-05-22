@@ -113,11 +113,13 @@
     rvm
     enh-ruby-mode
     inf-ruby
+    yaml-mode
 
     shell-command        ;; shell
     exec-path-from-shell
     multi-term
-    ))
+
+    restclient))
 
 (dolist (p colorvisa/packages)
   (when (not (package-installed-p p))
