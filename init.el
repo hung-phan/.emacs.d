@@ -63,12 +63,6 @@
     yasnippet            ;; code snipppets
     company              ;; auto complete package
 
-    tern
-    company-tern
-    js2-mode             ;; improve js editing
-    nodejs-repl
-    jsx-mode
-
     sublime-themes       ;; theme
     flx                  ;; fuzzy matching
     flx-ido              ;; fuzzy matching for ido
@@ -80,8 +74,13 @@
 
     slim-mode            ;; slim support
     haml-mode            ;; haml support
+    css-mode             ;; css
+    less-css-mode        ;; less support
     scss-mode            ;; scss support
     web-mode
+
+    markdown-mode        ;; markdown
+    markdown-mode+
 
     org
     org-trello           ;; trello mode
@@ -101,20 +100,24 @@
     dired-hacks-utils
     dired-rainbow
 
+    tern
+    company-tern
+    js2-mode             ;; improve js editing
+    nodejs-repl
+    jsx-mode
+
     clojure-mode
     clojure-test-mode
     cider                ;; clojure repl
-
-    shell-command        ;; shell
-    exec-path-from-shell
 
     robe                 ;; ruby
     rvm
     enh-ruby-mode
     inf-ruby
 
-    markdown-mode        ;; markdown
-    markdown-mode+
+    shell-command        ;; shell
+    exec-path-from-shell
+    multi-term
     ))
 
 (dolist (p colorvisa/packages)

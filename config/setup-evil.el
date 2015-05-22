@@ -12,10 +12,13 @@
 (setq evil-magic 'very-magic)
 
 ;;; default state
-(dolist (mode '(org-mode
+(dolist (mode '(dired-mode
+                org-mode
                 process-menu-mode
                 eshell-mode
-                shell-mode))
+                shell-mode
+                dired-mode
+                wdired-mode))
   (add-to-list'evil-emacs-state-modes mode))
 
 ;; -----------------------------------------------------------------------------
