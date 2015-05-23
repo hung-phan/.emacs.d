@@ -27,7 +27,8 @@
 (add-hook 'term-mode-hook
           (lambda ()
             (setq term-buffer-maximum-size 10000)
-            (setq show-trailing-whitespace nil)))
+            (setq show-trailing-whitespace nil)
+            (setq yas-dont-activate t)))
 
 (defun create-shell ()
     "creates a shell with a given name"
