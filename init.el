@@ -104,6 +104,7 @@
     js2-mode             ;; improve js editing
     nodejs-repl
     jsx-mode
+    coffee-mode
 
     clojure-mode
     clojure-test-mode

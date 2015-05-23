@@ -23,6 +23,8 @@
 (add-to-list 'company-backends 'company-inf-ruby t)
 (add-to-list 'company-backends 'company-robe t)
 (add-to-list 'company-backends 'company-tern)
+(eval-after-load 'tern
+  '(require 'company-tern))
 
 ;; init after load
 (add-hook 'after-init-hook 'global-company-mode)
