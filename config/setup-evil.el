@@ -94,8 +94,8 @@
 ;; redefine key
 ;; -----------------------------------------------------------------------------
 (define-key evil-visual-state-map [escape] 'keyboard-quit)
-(define-key evil-visual-state-map (kbd "<") 'indent-rigidly-left-to-tab-stop)
-(define-key evil-visual-state-map (kbd ">") 'indent-rigidly-right-to-tab-stop)
+(define-key evil-visual-state-map (kbd "<") 'textmate-shift-left)
+(define-key evil-visual-state-map (kbd ">") 'textmate-shift-right)
 (define-key evil-visual-state-map (kbd "C-g") 'evil-normal-state)
 (define-key evil-visual-state-map (kbd "J") 'move-text-down)
 (define-key evil-visual-state-map (kbd "K") 'move-text-up)
@@ -108,6 +108,7 @@
 (define-key evil-normal-state-map (kbd ";") 'evil-join)
 (define-key evil-normal-state-map (kbd "[ b") 'evil-prev-buffer)
 (define-key evil-normal-state-map (kbd "] b") 'evil-next-buffer)
+(define-key evil-normal-state-map (kbd "SPC c") 'comment-or-uncomment-region-or-line)
 (define-key evil-normal-state-map (kbd "SPC b") 'ido-switch-buffer)
 (define-key evil-normal-state-map (kbd "SPC B") 'ibuffer)
 (define-key evil-normal-state-map (kbd "SPC d") 'duplicate-current-line-or-region)

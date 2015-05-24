@@ -3,6 +3,7 @@
 ;; -----------------------------------------------------------------------------
 (add-hook 'before-save-hook 'whitespace-cleanup)
 (add-hook 'before-save-hook (lambda() (delete-trailing-whitespace)))
+(add-hook 'prog-mode-hook 'textmate-mode)
 
 ;; indent level
 (setq ruby-indent-level 2)

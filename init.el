@@ -48,6 +48,7 @@
     expand-region        ;; fast select
     paredit              ;; minor mode for editing parentheses
     paredit-everywhere
+    textmate
 
     god-mode
     evil-god-state
