@@ -19,8 +19,7 @@
   (setq fill-column 0) ;; never enter new line
 
   ;; auto insert and tag when typing </
-  (setq nxml-slash-auto-complete-flag t)
-  )
+  (setq nxml-slash-auto-complete-flag t))
 
 (add-hook 'web-mode-hook  'custom-web-mode-hook)
 

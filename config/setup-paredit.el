@@ -4,6 +4,7 @@
 ;; -----------------------------------------------------------------------------
 
 (require 'paredit)
+(require 'paredit-everywhere)
 (require 'dash)
 (require 's)
 
@@ -90,5 +91,8 @@
     sp-select-next-thing
     sp-forward-symbol
     sp-backward-symbol))
+
+(add-hook 'prog-mode-hook 'paredit-everywhere-mode)
+(add-hook 'prog-mode-hook 'electric-pair-mode)
 
 (provide 'setup-paredit)

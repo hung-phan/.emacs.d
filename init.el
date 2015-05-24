@@ -47,6 +47,7 @@
     move-text            ;; move text util
     expand-region        ;; fast select
     paredit              ;; minor mode for editing parentheses
+    paredit-everywhere
 
     god-mode
     evil-god-state
