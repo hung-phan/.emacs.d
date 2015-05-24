@@ -91,19 +91,4 @@
     sp-forward-symbol
     sp-backward-symbol))
 
-(defun paredit-for-nonlisp-mode ()
-  "Turn on paredit mode for non-lisps."
-  (interactive)
-  (set (make-local-variable 'paredit-space-for-delimiter-predicates)
-       '((lambda (endp delimiter) nil)))
-  (paredit-mode 1))
-
-(add-hook 'less-css-mode-hook 'paredit-for-nonlisp-mode)
-(add-hook 'scss-mode-hook 'paredit-for-nonlisp-mode)
-(add-hook 'css-mode-hook 'paredit-for-nonlisp-mode)
-(add-hook 'js-mode-hook 'paredit-for-nonlisp-mode)
-(add-hook 'js2-mode-hook 'paredit-for-nonlisp-mode)
-(add-hook 'ruby-mode-hook 'paredit-for-nonlisp-mode)
-(add-hook 'enh-ruby-mode-hook 'paredit-for-nonlisp-mode)
-
 (provide 'setup-paredit)
