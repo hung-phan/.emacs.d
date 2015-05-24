@@ -6,7 +6,8 @@
 
 ;; indent level
 (setq ruby-indent-level 2)
-(setq enh-ruby-indent-level 2)
 (setq css-indent-offset 2)
+(setq js-indent-level 2)
+(setq js2-basic-offset 2)
 
 (provide 'setup-editing)
