@@ -112,6 +112,7 @@
 (define-key evil-normal-state-map (kbd "SPC b") 'ido-switch-buffer)
 (define-key evil-normal-state-map (kbd "SPC B") 'ibuffer)
 (define-key evil-normal-state-map (kbd "SPC d") 'duplicate-current-line-or-region)
+(define-key evil-normal-state-map (kbd "SPC o") 'dired-jump)
 (define-key evil-normal-state-map (kbd "SPC p") 'projectile-find-file)
 (define-key evil-normal-state-map (kbd "SPC P") 'helm-projectile)
 (define-key evil-normal-state-map (kbd "SPC f") 'ido-find-file)
