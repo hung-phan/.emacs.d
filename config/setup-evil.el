@@ -125,6 +125,8 @@
 (define-key evil-normal-state-map (kbd "SPC v r") 'git-gutter:revert-hunk)
 (define-key evil-normal-state-map (kbd "J") 'move-text-down)
 (define-key evil-normal-state-map (kbd "K") 'move-text-up)
+(define-key evil-normal-state-map (kbd "C-e") (lambda () (interactive) (evil-scroll-line-down 8)))
+(define-key evil-normal-state-map (kbd "C-y") (lambda () (interactive) (evil-scroll-line-up 8)))
 
 ;; esc to quit everything
 (define-key minibuffer-local-map [escape] 'minibuffer-keyboard-quit)
