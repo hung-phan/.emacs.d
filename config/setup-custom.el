@@ -32,6 +32,7 @@
 (setq-default indent-tabs-mode nil)
 (setq-default tab-width 2) ;; default tab width
 (setq-default cursor-type 'bar)	;; set cursor to a thin vertical line instead of a little box
+(blink-cursor-mode -1)
 (global-hl-line-mode 1)	;; highlight current line
 (setq-default highlight-tabs t) ;; highlight tabulations
 (setq inhibit-startup-message t) ;; not display welcome message
