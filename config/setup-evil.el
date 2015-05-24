@@ -113,6 +113,7 @@
 (define-key evil-normal-state-map (kbd "SPC d") 'duplicate-current-line-or-region)
 (define-key evil-normal-state-map (kbd "SPC p") 'projectile-find-file)
 (define-key evil-normal-state-map (kbd "SPC P") 'helm-projectile)
+(define-key evil-normal-state-map (kbd "SPC f") 'ido-find-file)
 (define-key evil-normal-state-map (kbd "SPC g") 'magit-status)
 (define-key evil-normal-state-map (kbd "SPC 0") 'delete-window)
 (define-key evil-normal-state-map (kbd "SPC 1") 'delete-other-windows)
