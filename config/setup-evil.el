@@ -108,7 +108,7 @@
 (define-key evil-normal-state-map (kbd ";") 'evil-join)
 (define-key evil-normal-state-map (kbd "[ b") 'evil-prev-buffer)
 (define-key evil-normal-state-map (kbd "] b") 'evil-next-buffer)
-(define-key evil-normal-state-map (kbd "SPC c") 'comment-or-uncomment-region-or-line)
+(define-key evil-normal-state-map (kbd "SPC ;") 'comment-or-uncomment-region-or-line)
 (define-key evil-normal-state-map (kbd "SPC b") 'ido-switch-buffer)
 (define-key evil-normal-state-map (kbd "SPC B") 'ibuffer)
 (define-key evil-normal-state-map (kbd "SPC d") 'duplicate-current-line-or-region)
