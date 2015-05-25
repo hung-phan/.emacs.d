@@ -107,6 +107,7 @@
     nodejs-repl
     jsx-mode
     coffee-mode
+    json-mode
 
     clojure-mode
     clojure-test-mode

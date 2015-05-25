@@ -92,7 +92,9 @@
     sp-forward-symbol
     sp-backward-symbol))
 
-(add-hook 'prog-mode-hook 'paredit-everywhere-mode)
-(add-hook 'prog-mode-hook 'electric-pair-mode)
+(add-hook 'prog-mode-hook (lambda ()
+                            (paredit-everywhere-mode)
+                            (electric-pair-mode)
+                            (electric-indent-mode)))
 
 (provide 'setup-paredit)
