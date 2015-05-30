@@ -11,5 +11,6 @@
                (set-face-background 'mode-line-inactive (if limited-colors-p "black" "#0a2832")))))))
 
 (evil-define-key 'normal global-map "\\" 'evil-execute-in-god-state)
+(global-set-key (kbd "\\") 'god-local-mode)
 
 (provide 'setup-god-mode)
