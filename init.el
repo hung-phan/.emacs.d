@@ -39,7 +39,6 @@
     escreen              ;; multiple tab like vim
     undo-tree            ;; undo tree visualization
     nyan-mode            ;; nyan nyan
-    guide-key
 
     rainbow-mode         ;; color visualization
     rainbow-delimiters   ;; colorful bracket
@@ -138,7 +137,6 @@
 
 (require 'setup-defaults)
 (require 'setup-custom)
-(require 'setup-guide-key)
 
 (require 'setup-smex)
 (require 'setup-ido)
