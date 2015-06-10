@@ -2,9 +2,17 @@
 (require 'brin-theme)
 
 ;; smart mode line
-(setq sml/no-confirm-load-theme t)
-(setq sml/theme 'dark)
-(sml/setup)
+(colorvisa/set-up
+  'smart-mode-line
+  (setq sml/no-confirm-load-theme t)
+  (setq sml/theme 'dark)
+  (sml/setup))
+
+;; nyan-mode
+(colorvisa/set-up
+  'nyan-mode
+  (nyan-mode 1)
+  (setq nyan-bar-length 15))
 
 ;; Appearance config
 (if (fboundp 'menu-bar-mode) (menu-bar-mode -1))
@@ -22,9 +30,6 @@
 (setq mouse-wheel-progressive-speed nil) ;; don't accelerate scrolling
 (setq mouse-wheel-follow-mouse 't) ;; scroll window under mouse
 (setq scroll-step 1) ;; keyboard scroll one line at a time
-
-;; nyan-mode
-(colorvisa/set-up 'nyan-mode (nyan-mode 1) (setq nyan-bar-length 15))
 
 ;; rainbow-delimiters mode
 (require 'rainbow-delimiters)
