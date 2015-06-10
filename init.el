@@ -175,7 +175,7 @@
  ;; If there is more than one, they won't work right.
  '(custom-safe-themes
    (quote
-    ("3c83b3676d796422704082049fc38b6966bcad960f896669dfc21a7a37a748fa" default)))
+    ("c74e83f8aa4c78a121b52146eadb792c9facc5b1f02c917e3dbb454fca931223" "3c83b3676d796422704082049fc38b6966bcad960f896669dfc21a7a37a748fa" default)))
  '(flycheck-display-errors-function (function flycheck-pos-tip-error-messages))
  '(term-default-bg-color "#000000")
  '(term-default-fg-color "#dddd00"))

@@ -1,7 +1,9 @@
-;; Theme
+(require 'smart-mode-line)
 (require 'brin-theme)
 
 ;; smart mode line
+(setq sml/no-confirm-load-theme t)
+(setq sml/theme 'dark)
 (sml/setup)
 
 ;; Appearance config
