@@ -1,6 +1,9 @@
 ;; Theme
 (require 'brin-theme)
 
+;; smart mode line
+(sml/setup)
+
 ;; Appearance config
 (if (fboundp 'menu-bar-mode) (menu-bar-mode -1))
 (if (fboundp 'tool-bar-mode) (tool-bar-mode -1))
