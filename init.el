@@ -1,3 +1,6 @@
+;; -----------------------------------------------------------------------------
+;; set default username and email
+;; -----------------------------------------------------------------------------
 (setq user-full-name "Hung Phan")
 (setq user-mail-address "colorvisavn@gmail.com")
 
@@ -34,6 +37,7 @@
     magit                ;; control git from emacs
     git-gutter           ;; git gutter
     git-timemachine      ;; git history
+    gist
 
     windmove             ;; fast window jum
     escreen              ;; multiple tab like vim
@@ -87,10 +91,12 @@
 
     org
     org-trello           ;; trello mode
+    org-present
 
     golden-ratio         ;; auto resize window by golden ratio
 
     helm                 ;; incremental completion and selection
+    helm-swoop
     helm-descbinds       ;; A helm frontend for describe-bindings.
     helm-projectile      ;; explore large projects
     helm-flycheck        ;; explore large projects
@@ -107,7 +113,6 @@
     company-tern
     js2-mode             ;; improve js editing
     nodejs-repl
-    jsx-mode
     coffee-mode
     json-mode
 
@@ -120,6 +125,7 @@
     enh-ruby-mode
     inf-ruby
     yaml-mode
+    rspec-mode
 
     shell-command        ;; shell
     exec-path-from-shell
@@ -131,6 +137,7 @@
   (when (not (package-installed-p p))
     (package-install p)))
 
+(server-start)
 ;; -----------------------------------------------------------------------------
 ;; Extra config
 ;; -----------------------------------------------------------------------------
@@ -149,6 +156,7 @@
 (require 'setup-dired)
 (require 'setup-yasnippet)
 (require 'setup-autocomplete)
+(require 'setup-org)
 
 (require 'setup-shell)
 (require 'setup-ruby-mode)
@@ -160,7 +168,6 @@
 (require 'setup-multiple-cursors)
 (require 'setup-ace-jump)
 (require 'setup-escreen)
-(require 'setup-undo-tree)
 (require 'setup-evil)
 (require 'setup-god-mode)
 

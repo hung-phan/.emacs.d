@@ -1,12 +1,17 @@
-(require 'magit)
+(require 'git-timemachine)
+(require 'gist)
 
-;; Subtler highlight
-(set-default 'magit-stage-all-confirm nil)
-(set-default 'magit-unstage-all-confirm nil)
+(colorvisa/set-up 'git-gutter
+  ;; enable git-gutter as global mode
+  (global-git-gutter-mode +1))
 
-;; prevent warning to be shown
-(setq magit-last-seen-setup-instructions "1.4.0")
+(colorvisa/set-up 'magit
+  ;; no prompt for confirmation
+  (set-default 'magit-stage-all-confirm nil)
+  (set-default 'magit-unstage-all-confirm nil)
 
-(add-hook 'magit-mode-hook 'magit-load-config-extensions)
+  ;; prevent warning to be shown
+  (setq magit-last-seen-setup-instructions "1.4.0")
+  (add-hook 'magit-mode-hook 'magit-load-config-extensions))
 
 (provide 'setup-magit)

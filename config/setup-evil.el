@@ -18,7 +18,16 @@
                 eshell-mode
                 shell-mode
                 dired-mode
-                wdired-mode))
+                wdired-mode
+                magit-mode
+                magit-popup-mode
+                magit-popup-sequence-mode
+                magit-refs-mode
+                magit-log-select-mode
+                magit-diff-mode
+                magit-revision-mode
+                git-rebase-mode
+                git-timemachine-mode))
   (add-to-list'evil-emacs-state-modes mode))
 
 ;; -----------------------------------------------------------------------------
@@ -97,12 +106,15 @@
 (define-key evil-visual-state-map (kbd "<") 'textmate-shift-left)
 (define-key evil-visual-state-map (kbd ">") 'textmate-shift-right)
 (define-key evil-visual-state-map (kbd "C-g") 'evil-normal-state)
-(define-key evil-visual-state-map (kbd "J") 'move-text-down)
-(define-key evil-visual-state-map (kbd "K") 'move-text-up)
+(define-key evil-visual-state-map (kbd "SPC ;") 'comment-or-uncomment-region-or-line)
+(colorvisa/set-up 'move-text
+  (define-key evil-visual-state-map (kbd "J") 'move-text-down)
+  (define-key evil-visual-state-map (kbd "K") 'move-text-up))
 
 (define-key evil-motion-state-map (kbd "RET") 'open-line-below)
 
 (define-key evil-normal-state-map [escape] 'keyboard-quit)
+(define-key evil-normal-state-map (kbd "<f2>") 'ace-jump-mode)
 (define-key evil-normal-state-map (kbd "<") 'evil-indent-left)
 (define-key evil-normal-state-map (kbd ">") 'evil-indent-right)
 (define-key evil-normal-state-map (kbd ";") 'evil-join)
@@ -121,12 +133,13 @@
 (define-key evil-normal-state-map (kbd "SPC 1") 'delete-other-windows)
 (define-key evil-normal-state-map (kbd "SPC 2") 'split-window-below)
 (define-key evil-normal-state-map (kbd "SPC 3") 'split-window-right)
-(define-key evil-normal-state-map (kbd "SPC SPC") 'other-window)
+(define-key evil-normal-state-map (kbd "SPC SPC") 'er/expand-region)
 (define-key evil-normal-state-map (kbd "SPC /") 'helm-ag-project-root)
 (define-key evil-normal-state-map (kbd "SPC v s") 'git-gutter:stage-hunk)
 (define-key evil-normal-state-map (kbd "SPC v r") 'git-gutter:revert-hunk)
-(define-key evil-normal-state-map (kbd "J") 'move-text-down)
-(define-key evil-normal-state-map (kbd "K") 'move-text-up)
+(colorvisa/set-up 'move-text
+  (define-key evil-normal-state-map (kbd "J") 'move-text-down)
+  (define-key evil-normal-state-map (kbd "K") 'move-text-up))
 (define-key evil-normal-state-map (kbd "C-e") (lambda () (interactive) (evil-scroll-line-down 8)))
 (define-key evil-normal-state-map (kbd "C-y") (lambda () (interactive) (evil-scroll-line-up 8)))
 
@@ -149,8 +162,7 @@
   "q" 'evil-quit
   "s" 'projectile-run-async-shell-command-in-root
   "e" 'smart-send-command-to-repl
-  "c" 'smart-start-repl
-  "=" 'er/expand-region)
+  "c" 'smart-start-repl)
 
 (setq evil-mode-line-format 'before
       evil-normal-state-tag (propertize "« NORMAL »" 'face 'colorvisa/evil-normal-tag)

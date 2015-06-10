@@ -1,5 +1,4 @@
-(require 'escreen)
-
-(escreen-install)
+(colorvisa/set-up 'escreen
+  (escreen-install))
 
 (provide 'setup-escreen)

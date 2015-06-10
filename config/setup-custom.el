@@ -1,18 +1,24 @@
-(require 'smart-mode-line)
 (require 'brin-theme)
 
 ;; smart mode line
-(colorvisa/set-up
-  'smart-mode-line
+(colorvisa/set-up 'smart-mode-line
   (setq sml/no-confirm-load-theme t)
   (setq sml/theme 'dark)
   (sml/setup))
 
 ;; nyan-mode
-(colorvisa/set-up
-  'nyan-mode
+(colorvisa/set-up 'nyan-mode
   (nyan-mode 1)
   (setq nyan-bar-length 15))
+
+;; undo tree
+(colorvisa/set-up 'undo-tree
+  (setq undo-tree-mode-lighter "")
+  (global-undo-tree-mode))
+
+;; rainbow-delimiters mode
+(colorvisa/set-up 'rainbow-delimiters
+  (add-hook 'prog-mode-hook 'rainbow-delimiters-mode))
 
 ;; Appearance config
 (if (fboundp 'menu-bar-mode) (menu-bar-mode -1))
@@ -20,7 +26,8 @@
 (if (fboundp 'scroll-bar-mode) (scroll-bar-mode -1))
 (setq frame-title-format '(buffer-file-name "%f" ("%b")))
 (dolist (mode '(menu-bar-mode tool-bar-mode scroll-bar-mode))
-  (when (fboundp mode) (funcall mode -1))) ;; Turn off mouse interface early in startup to avoid momentary display
+  ;; Turn off mouse interface early in startup to avoid momentary display
+  (when (fboundp mode) (funcall mode -1)))
 
 ;; Show trailing white spaces
 (setq-default show-trailing-whitespace t)
@@ -30,10 +37,6 @@
 (setq mouse-wheel-progressive-speed nil) ;; don't accelerate scrolling
 (setq mouse-wheel-follow-mouse 't) ;; scroll window under mouse
 (setq scroll-step 1) ;; keyboard scroll one line at a time
-
-;; rainbow-delimiters mode
-(require 'rainbow-delimiters)
-(add-hook 'prog-mode-hook 'rainbow-delimiters-mode)
 
 ;; minor config
 (setq inhibit-startup-message t) ;; No splash screen
