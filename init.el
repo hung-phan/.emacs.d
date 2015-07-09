@@ -120,6 +120,8 @@
     clojure-test-mode
     cider                ;; clojure repl
 
+    jade-mode
+
     robe                 ;; ruby
     rvm
     enh-ruby-mode
