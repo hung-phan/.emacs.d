@@ -56,4 +56,9 @@
 (setq tab-always-indent 'complete)
 (setq inhibit-startup-screen t)
 
+;; solution for weird characters in comint-mode
+(add-to-list 'comint-preoutput-filter-functions
+             (lambda (output)
+               (replace-regexp-in-string "\033\\[[0-9]+[A-Z]" "" output)))
+
 (provide 'setup-custom)
