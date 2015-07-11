@@ -113,6 +113,7 @@
     company-tern
     js2-mode             ;; improve js editing
     nodejs-repl
+    babel-repl
     coffee-mode
     json-mode
 

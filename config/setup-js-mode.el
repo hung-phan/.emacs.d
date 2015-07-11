@@ -1,4 +1,5 @@
 (require 'nodejs-repl)
+(require 'babel-repl)
 
 (setq nodejs-repl-arguments
       '("--use-strict"
