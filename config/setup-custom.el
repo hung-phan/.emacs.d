@@ -1,3 +1,4 @@
+(require 'comint)
 (require 'brin-theme)
 
 ;; smart mode line
