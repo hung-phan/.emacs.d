@@ -12,11 +12,13 @@
 (setq evil-magic 'very-magic)
 
 ;;; default state
-(dolist (mode '(dired-mode
-                org-mode
-                process-menu-mode
+(dolist (mode '(comint-mode
                 eshell-mode
                 shell-mode
+                nodejs-repl-mode
+                process-menu-mode
+                cider-repl-mode
+                org-mode
                 dired-mode
                 wdired-mode
                 magit-mode
@@ -27,7 +29,8 @@
                 magit-diff-mode
                 magit-revision-mode
                 git-rebase-mode
-                git-timemachine-mode))
+                git-timemachine-mode
+                git-commit-mode))
   (add-to-list'evil-emacs-state-modes mode))
 
 ;; -----------------------------------------------------------------------------
