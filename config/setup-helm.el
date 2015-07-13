@@ -5,6 +5,7 @@
 (require 'helm-projectile)
 (require 'helm-flycheck)
 
+;;; Code:
 (colorvisa/in '(darwin)
   (setq helm-locate-command "mdfind %s %s"))
 
@@ -13,6 +14,7 @@
 (helm-mode 1)
 (helm-descbinds-install)
 
+;; set helm variables
 (setq
  helm-mp-highlight-delay 0.7
  helm-mp-highlight-threshold 4
@@ -23,5 +25,16 @@
  helm-always-two-windows nil
  helm-split-window-default-side 'other
  helm-candidate-number-limit 200)
+
+(defun helm-backspace ()
+  "Forward to `backward-delete-char'. On error (read-only), quit without selecting."
+  (interactive)
+  (condition-case nil
+      (backward-delete-char 1)
+    (error
+     (helm-keyboard-quit))))
+
+(define-key helm-map (kbd "DEL") 'helm-backspace)
+(define-key helm-map [escape] 'helm-keyboard-quit)
 
 (provide 'setup-helm)
