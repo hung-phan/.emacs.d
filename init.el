@@ -122,6 +122,7 @@
     cider                ;; clojure repl
 
     jade-mode
+    stylus-mode
 
     robe                 ;; ruby
     rvm
