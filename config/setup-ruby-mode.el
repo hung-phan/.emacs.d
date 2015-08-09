@@ -20,8 +20,7 @@
 (setq ruby-deep-indent-paren nil)
 
 (add-hook 'after-init-hook 'inf-ruby-switch-setup)
-(add-hook 'ruby-mode-hook 'robe-mode)
-(add-hook 'ruby-mode-hook 'inf-ruby-minor-mode)
+(add-to-list 'auto-mode-alist '("\\.rb$" . enh-ruby-mode))
 (add-hook 'enh-ruby-mode-hook 'robe-mode)
 (add-hook 'enh-ruby-mode-hook 'inf-ruby-minor-mode)
 
