@@ -111,11 +111,11 @@
 
     tern
     company-tern
-    js2-mode             ;; improve js editing
     nodejs-repl
     babel-repl
     coffee-mode
     json-mode
+    js2-mode             ;; improve js editing
 
     clojure-mode
     clojure-test-mode
@@ -162,11 +162,6 @@
 (require 'setup-autocomplete)
 (require 'setup-org)
 
-(require 'setup-shell)
-(require 'setup-ruby-mode)
-(require 'setup-clojure-mode)
-(require 'setup-js-mode)
-(require 'setup-web-mode)
 (require 'setup-magit)
 (require 'setup-gitgutter)
 (require 'setup-multiple-cursors)
@@ -174,6 +169,11 @@
 (require 'setup-escreen)
 (require 'setup-evil)
 (require 'setup-god-mode)
+(require 'setup-shell)
+(require 'setup-ruby-mode)
+(require 'setup-clojure-mode)
+(require 'setup-js-mode)
+(require 'setup-web-mode)
 
 (require 'setup-editing)
 (require 'setup-mappings)
