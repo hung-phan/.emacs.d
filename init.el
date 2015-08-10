@@ -131,8 +131,6 @@
     yaml-mode
     rspec-mode
 
-    jedi                 ;; python
-
     shell-command        ;; shell
     exec-path-from-shell
     multi-term
