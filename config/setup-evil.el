@@ -18,6 +18,8 @@
                 nodejs-repl-mode
                 process-menu-mode
                 cider-repl-mode
+                diff-mode
+                ediff-mode
                 org-mode
                 dired-mode
                 wdired-mode
