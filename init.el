@@ -131,6 +131,8 @@
     yaml-mode
     rspec-mode
 
+    elpy                 ;; python
+
     shell-command        ;; shell
     exec-path-from-shell
     multi-term
@@ -171,6 +173,7 @@
 (require 'setup-god-mode)
 (require 'setup-shell)
 (require 'setup-ruby-mode)
+(require 'setup-python-mode)
 (require 'setup-clojure-mode)
 (require 'setup-js-mode)
 (require 'setup-web-mode)
