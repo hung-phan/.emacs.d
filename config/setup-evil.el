@@ -96,8 +96,8 @@
 
         ((eq major-mode 'python-mode)
          (if (region-active-p)
-             (elpy-shell-send-region-or-buffer (region-beginning) (region-end))
-             (elpy-shell-send-region-or-buffer (line-beginning-position) (+ 1 (line-end-position)))))
+             (python-shell-send-region (region-beginning) (region-end))
+             (python-shell-send-region (line-beginning-position) (+ 1 (line-end-position)))))
 
         ((eq major-mode 'clojure-mode)
          (progn
