@@ -3,7 +3,6 @@
 (require 'dired+)
 (require 'dired-details)
 (require 'dired-details+)
-(require 'dired-rainbow)
 
 ;; -----------------------------------------------------------------------------
 ;; copy from https://github.com/magnars/.emacs.d/blob/master/settings%2Fsetup-dired.el

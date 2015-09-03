@@ -35,6 +35,13 @@
                 git-commit-mode))
   (add-to-list'evil-emacs-state-modes mode))
 
+;; git-timemachine override
+(eval-after-load 'git-timemachine
+  '(progn
+     (evil-make-overriding-map git-timemachine-mode-map 'normal)
+     ;; force update evil keymaps after git-timemachine-mode loaded
+     (add-hook 'git-timemachine-mode-hook #'evil-normalize-keymaps)))
+
 ;; -----------------------------------------------------------------------------
 ;; copy from http://rejeep.github.io/emacs/elisp/2010/03/11/duplicate-current-line-or-region-in-emacs.html
 ;; -----------------------------------------------------------------------------

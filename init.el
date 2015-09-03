@@ -107,7 +107,6 @@
     dired-details+
     dired+
     dired-hacks-utils
-    dired-rainbow
 
     tern
     company-tern
