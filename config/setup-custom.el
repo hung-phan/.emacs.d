@@ -17,6 +17,9 @@
   (setq undo-tree-mode-lighter "")
   (global-undo-tree-mode))
 
+(colorvisa/in '(darwin)
+  (set-default-font "Hack"))
+
 ;; rainbow-delimiters mode
 (colorvisa/set-up 'rainbow-delimiters
   (add-hook 'prog-mode-hook 'rainbow-delimiters-mode))

@@ -178,7 +178,8 @@
   "q" 'evil-quit
   "s" 'projectile-run-async-shell-command-in-root
   "e" 'smart-send-command-to-repl
-  "c" 'smart-start-repl)
+  "c" 'smart-start-repl
+  "/" 'helm-swoop)
 
 (setq evil-mode-line-format 'before
       evil-normal-state-tag (propertize "« NORMAL »" 'face 'colorvisa/evil-normal-tag)
