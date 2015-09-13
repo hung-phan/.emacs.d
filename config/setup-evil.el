@@ -192,6 +192,7 @@
       evil-normal-state-tag (propertize "« NORMAL »" 'face 'colorvisa/evil-normal-tag)
       evil-motion-state-tag (propertize "« MOTION »" 'face 'colorvisa/evil-normal-tag)
       evil-insert-state-tag (propertize "« INSERT »" 'face 'colorvisa/evil-insert-tag)
+      evil-replace-state-tag (propertize "« REPLACE »" 'face 'colorvisa/evil-replace-tag)
       evil-emacs-state-tag (propertize "« EMACS »" 'face 'colorvisa/evil-emacs-tag)
       evil-visual-state-tag (propertize "« ∞ »" 'face 'colorvisa/evil-visual-tag)
       evil-motion-state-cursor '(box "YellowGreen")
