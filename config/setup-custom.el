@@ -1,5 +1,6 @@
 (require 'comint)
-(require 'brin-theme)
+
+(load-theme 'zenburn t)
 
 ;; smart mode line
 (colorvisa/set-up 'smart-mode-line

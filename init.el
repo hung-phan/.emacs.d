@@ -70,7 +70,7 @@
     yasnippet            ;; code snipppets
     company              ;; auto complete package
 
-    sublime-themes       ;; theme
+    zenburn-theme        ;; theme
     flx                  ;; fuzzy matching
     flx-ido              ;; fuzzy matching for ido
 
