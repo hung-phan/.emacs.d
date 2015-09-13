@@ -1,5 +1,6 @@
 (require 'comint)
 
+;; load theme
 (load-theme 'zenburn t)
 
 ;; smart mode line
