@@ -19,16 +19,20 @@
 (setq company-dabbrev-downcase nil)
 
 ;; autocomplete list
-(setq company-backends (remove 'company-ropemacs company-backends))
-(setq company-backends (remove 'company-bbdb company-backends))
-(setq company-backends (remove 'company-semantic company-backends))
-(setq company-backends (remove 'company-eclim company-backends))
-(setq company-backends (remove 'company-oddmuse company-backends))
-(setq company-backends (remove 'company-etags company-backends))
-(setq company-backends (remove 'company-gtags company-backends))
-(setq company-backends (remove 'company-xcode company-backends))
-(setq company-backends (remove 'company-clang company-backends))
-(setq company-backends (remove 'company-cmake company-backends))
+(defvar colorvisa/removed-packages '(company-ropemacs
+                                    company-bbdb
+                                    company-semantic
+                                    company-eclim
+                                    company-oddmuse
+                                    company-etags
+                                    company-gtags
+                                    company-xcode
+                                    company-clang
+                                    company-cmake))
+
+(dolist (p colorvisa/removed-packages)
+  (setq company-backends (remove p company-backends)))
+
 (add-to-list 'company-backends 'company-yasnippet t)
 (add-to-list 'company-backends 'company-inf-ruby t)
 (add-to-list 'company-backends 'company-robe t)
