@@ -29,6 +29,11 @@
                       start end))
 
 (add-to-list 'auto-mode-alist '("\\.js$" . js2-mode))
+(add-to-list 'auto-mode-alist '("\\.es6$" . js2-mode))
 (add-hook 'js2-mode-hook 'tern-mode)
+(add-hook 'js2-mode-hook
+          (lambda ()
+            (push '("function" . ?λ) prettify-symbols-alist)
+            (push '("yield" . ?γ) prettify-symbols-alist)))
 
 (provide 'setup-js-mode)

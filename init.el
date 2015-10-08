@@ -132,6 +132,8 @@
 
     elpy                 ;; python
 
+    scala-mode2          ;; scala
+
     shell-command        ;; shell
     exec-path-from-shell
     multi-term

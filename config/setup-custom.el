@@ -45,6 +45,7 @@
 (setq scroll-step 1) ;; keyboard scroll one line at a time
 
 ;; minor config
+(global-prettify-symbols-mode 1)
 (setq inhibit-startup-message t) ;; No splash screen
 (setq visible-bell nil) ;; turn off visible bell
 (setq ring-bell-function 'ignore) ;; also annoying square display
