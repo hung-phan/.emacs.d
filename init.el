@@ -7,6 +7,7 @@
 ;; -----------------------------------------------------------------------------
 ;; define some load path here
 ;; -----------------------------------------------------------------------------
+(add-to-list 'load-path "~/.emacs.d/theme/")
 (add-to-list 'load-path "~/.emacs.d/config/")
 
 ;; -----------------------------------------------------------------------------
@@ -70,7 +71,6 @@
     yasnippet            ;; code snipppets
     company              ;; auto complete package
 
-    zenburn-theme        ;; theme
     flx                  ;; fuzzy matching
     flx-ido              ;; fuzzy matching for ido
 
@@ -148,6 +148,7 @@
 ;; -----------------------------------------------------------------------------
 ;; Extra config
 ;; -----------------------------------------------------------------------------
+(require 'dracula-theme)
 (require 'setup-util)
 
 (require 'setup-defaults)

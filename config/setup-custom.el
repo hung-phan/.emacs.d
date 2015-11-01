@@ -1,7 +1,7 @@
 (require 'comint)
 
 ;; load theme
-(load-theme 'zenburn t)
+(load-theme 'dracula t)
 
 ;; smart mode line
 (colorvisa/set-up 'smart-mode-line

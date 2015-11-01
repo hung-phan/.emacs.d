@@ -34,6 +34,6 @@
 (add-hook 'js2-mode-hook
           (lambda ()
             (push '("function" . ?λ) prettify-symbols-alist)
-            (push '("yield" . ?γ) prettify-symbols-alist)))
+            (push '("yield" . ?⊢) prettify-symbols-alist)))
 
 (provide 'setup-js-mode)
