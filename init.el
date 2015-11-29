@@ -115,6 +115,7 @@
     coffee-mode
     json-mode
     js2-mode             ;; improve js editing
+    js2-refactor
 
     clojure-mode
     clojure-test-mode
