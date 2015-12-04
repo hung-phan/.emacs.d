@@ -137,7 +137,7 @@
 (define-key evil-motion-state-map (kbd "RET") 'open-line-below)
 
 (define-key evil-normal-state-map [escape] 'keyboard-quit)
-(define-key evil-normal-state-map (kbd "C-m") 'ace-jump-mode)
+(define-key evil-normal-state-map (kbd "C-a") 'ace-jump-mode)
 (define-key evil-normal-state-map (kbd "<") 'evil-indent-left)
 (define-key evil-normal-state-map (kbd ">") 'evil-indent-right)
 (define-key evil-normal-state-map (kbd ";") 'evil-join)
