@@ -46,7 +46,6 @@
 
 ;; minor config
 (global-prettify-symbols-mode 1)
-(setq inhibit-startup-message t) ;; No splash screen
 (setq visible-bell nil) ;; turn off visible bell
 (setq ring-bell-function 'ignore) ;; also annoying square display
 (setq-default indent-tabs-mode nil)
@@ -55,7 +54,6 @@
 (blink-cursor-mode -1)
 (global-hl-line-mode 1)	;; highlight current line
 (setq-default highlight-tabs t) ;; highlight tabulations
-(setq inhibit-startup-message t) ;; not display welcome message
 (setq uniquify-buffer-name-style 'forward)
 (show-paren-mode 1) ;; highlight matching paren
 (setq-default show-trailing-whitespace t)
