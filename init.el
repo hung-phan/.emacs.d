@@ -107,6 +107,7 @@
     dired-details+
     dired+
     dired-hacks-utils
+    dired-sort-menu
 
     tern
     company-tern

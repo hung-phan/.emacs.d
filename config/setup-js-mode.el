@@ -1,27 +1,6 @@
 (require 'nodejs-repl)
 (require 'babel-repl)
 
-(setq nodejs-repl-arguments
-      '("--use-strict"
-        "--es_staging"
-        "--harmony"
-        "--harmony_shipping"
-        "--harmony_modules"
-        "--harmony_arrays"
-        "--harmony_array_includes"
-        "--harmony_regexps"
-        "--harmony_arrow_functions"
-        "--harmony_proxies"
-        "--harmony_sloppy"
-        "--harmony_unicode"
-        "--harmony_tostring"
-        "--harmony_classes"
-        "--harmony_object_literals"
-        "--harmony_numeric_literals"
-        "--harmony_strings"
-        "--harmony_scoping"
-        "--harmony_templates"))
-
 (defun send-region-to-nodejs-repl-process (start end)
   "Send region to `nodejs-repl' process."
   (interactive "r")

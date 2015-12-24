@@ -1,5 +1,4 @@
-(require 'dash)
-
+(require 'ls-lisp)
 (require 'dired+)
 (require 'dired-details)
 (require 'dired-details+)
@@ -7,8 +6,11 @@
 ;; -----------------------------------------------------------------------------
 ;; copy from https://github.com/magnars/.emacs.d/blob/master/settings%2Fsetup-dired.el
 ;; -----------------------------------------------------------------------------
-
 ;; Make dired less verbose
+(setq ls-lisp-use-insert-directory-program t)
+(setq insert-directory-program "/usr/local/bin/gls")(require 'dash)
+(setq dired-listing-switches "--group-directories-first -alh")
+
 (setq-default dired-details-hidden-string "- ")
 (dired-details-install)
 
