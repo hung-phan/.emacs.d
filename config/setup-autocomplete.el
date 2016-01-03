@@ -18,6 +18,9 @@
 (setq company-dabbrev-ignore-case t)
 (setq company-dabbrev-downcase nil)
 
+(defvar company-mode/enable-yas t
+  "Enable yasnippet for all backends.")
+
 ;; autocomplete list
 (defvar colorvisa/removed-packages '(company-ropemacs
                                     company-bbdb
@@ -37,6 +40,15 @@
 (add-to-list 'company-backends 'company-inf-ruby t)
 (add-to-list 'company-backends 'company-robe t)
 (add-to-list 'company-backends 'company-tern)
+
+(defun company-mode/backend-with-yas (backend)
+  (if (or (not company-mode/enable-yas) (and (listp backend) (member 'company-yasnippet backend)))
+      backend
+    (append (if (consp backend) backend (list backend))
+            '(:with company-yasnippet))))
+
+(setq company-backends (mapcar #'company-mode/backend-with-yas company-backends))
+
 (eval-after-load 'tern '(require 'company-tern))
 
 ;; init after load

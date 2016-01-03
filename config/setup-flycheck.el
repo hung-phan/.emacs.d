@@ -44,4 +44,19 @@
 
 (add-hook 'after-init-hook #'global-flycheck-mode)
 
+;; disable jshint since we prefer eslint checking
+(setq-default flycheck-disabled-checkers
+              (append flycheck-disabled-checkers
+                      '(javascript-jshint)))
+
+;; disable json-jsonlist checking for json files
+(setq-default flycheck-disabled-checkers
+              (append flycheck-disabled-checkers
+                      '(json-jsonlist)))
+
+(setq flycheck-checkers '(javascript-eslint))
+(flycheck-add-mode 'javascript-eslint 'js2-mode)
+(flycheck-add-mode 'javascript-eslint 'js-mode)
+(flycheck-add-mode 'javascript-eslint 'web-mode)
+
 (provide 'setup-flycheck)
