@@ -14,6 +14,10 @@
   (nyan-mode 1)
   (setq nyan-bar-length 15))
 
+;; which-key
+(colorvisa/set-up 'which-key
+  (which-key-mode))
+
 ;; undo tree
 (colorvisa/set-up 'undo-tree
   (setq undo-tree-mode-lighter "")

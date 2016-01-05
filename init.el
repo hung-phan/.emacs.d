@@ -40,6 +40,7 @@
     git-timemachine      ;; git history
     gist
 
+    which-key
     windmove             ;; fast window jum
     escreen              ;; multiple tab like vim
     undo-tree            ;; undo tree visualization
