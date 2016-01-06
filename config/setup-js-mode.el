@@ -7,9 +7,17 @@
   (comint-send-region (get-process nodejs-repl-process-name)
                       start end))
 
+(setq-default js2-basic-offset 2
+              js2-bounce-indent-p nil)
+
+;; Disable js2 mode's syntax error highlighting by default...
+(setq-default js2-mode-show-parse-errors nil
+              js2-mode-show-strict-warnings nil)
+
 (js2r-add-keybindings-with-prefix "C-c C-m")
 (add-to-list 'auto-mode-alist '("\\.js$" . js2-mode))
 (add-to-list 'auto-mode-alist '("\\.es6$" . js2-mode))
+
 (add-hook 'js2-mode-hook 'tern-mode)
 (add-hook 'js2-mode-hook 'js2-refactor-mode)
 (add-hook 'js2-mode-hook
