@@ -13,21 +13,23 @@
    `(company-tooltip-common ((t (:inherit font-lock-constant-face))))))
 
 ;; custom company mode
-(setq company-idle-delay 0)
-(setq company-minimum-prefix-length 1)
-(setq company-dabbrev-ignore-case t)
-(setq company-dabbrev-downcase nil)
+(setq company-idle-delay 0
+      company-minimum-prefix-length 1
+      company-require-match nil
+      company-dabbrev-ignore-case t
+      company-dabbrev-downcase nil
+      company-frontends '(company-pseudo-tooltip-frontend))
 
-(defvar company-mode/enable-yas t
-  "Enable yasnippet for all backends.")
+;; enable yasnippet for all backends
+(defvar company-mode/enable-yas t)
 
 ;; autocomplete list
 (defvar colorvisa/removed-packages '(company-ropemacs
-                                    company-bbdb
-                                    company-eclim
-                                    company-xcode
-                                    company-clang
-                                    company-cmake))
+                                     company-bbdb
+                                     company-eclim
+                                     company-xcode
+                                     company-clang
+                                     company-cmake))
 
 (dolist (p colorvisa/removed-packages)
   (setq company-backends (remove p company-backends)))

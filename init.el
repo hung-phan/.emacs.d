@@ -97,7 +97,7 @@
     golden-ratio         ;; auto resize window by golden ratio
 
     helm                 ;; incremental completion and selection
-    helm-swoop
+    helm-swoop           ;; search functionality
     helm-descbinds       ;; A helm frontend for describe-bindings.
     helm-projectile      ;; explore large projects
     helm-flycheck        ;; explore large projects
