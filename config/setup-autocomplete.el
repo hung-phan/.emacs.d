@@ -24,8 +24,7 @@
 (defvar company-mode/enable-yas t)
 
 ;; autocomplete list
-(defvar colorvisa/removed-packages '(company-ropemacs
-                                     company-bbdb
+(defvar colorvisa/removed-packages '(company-bbdb
                                      company-eclim
                                      company-xcode
                                      company-clang
