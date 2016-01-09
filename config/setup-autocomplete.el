@@ -42,8 +42,9 @@
 (defun company-mode/backend-with-yas (backend)
   (if (or (not company-mode/enable-yas) (and (listp backend) (member 'company-yasnippet backend)))
       backend
-    (append (if (consp backend) backend (list backend))
-            '(:with company-yasnippet))))
+    (append
+     (if (consp backend) backend (list backend))
+     '(:with company-yasnippet company-dabbrev-code))))
 
 (setq company-backends (mapcar #'company-mode/backend-with-yas company-backends))
 
