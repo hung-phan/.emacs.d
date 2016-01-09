@@ -24,11 +24,7 @@
 ;; autocomplete list
 (defvar colorvisa/removed-packages '(company-ropemacs
                                     company-bbdb
-                                    company-semantic
                                     company-eclim
-                                    company-oddmuse
-                                    company-etags
-                                    company-gtags
                                     company-xcode
                                     company-clang
                                     company-cmake))
