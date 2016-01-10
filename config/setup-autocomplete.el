@@ -24,19 +24,17 @@
 (defvar company-mode/enable-yas t)
 
 ;; autocomplete list
-(defvar colorvisa/removed-packages '(company-bbdb
-                                     company-eclim
-                                     company-xcode
-                                     company-clang
-                                     company-cmake))
-
-(dolist (p colorvisa/removed-packages)
-  (setq company-backends (remove p company-backends)))
-
-(add-to-list 'company-backends 'company-yasnippet t)
-(add-to-list 'company-backends 'company-inf-ruby t)
-(add-to-list 'company-backends 'company-robe t)
-(add-to-list 'company-backends 'company-tern)
+(setq company-backends '((company-tern)
+                         (company-nxml)
+                         (company-css)
+                         (company-semantic)
+                         (company-capf)
+                         (company-gtags company-etags company-keywords)
+                         (company-oddmuse)
+                         (company-files)
+                         (company-dabbrev)
+                         (company-inf-ruby)
+                         (company-robe)))
 
 (defun company-mode/backend-with-yas (backend)
   (if (or (not company-mode/enable-yas) (and (listp backend) (member 'company-yasnippet backend)))
