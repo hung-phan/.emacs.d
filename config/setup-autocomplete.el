@@ -24,8 +24,7 @@
 (defvar company-mode/enable-yas t)
 
 ;; autocomplete list
-(setq company-backends '((company-tern)
-                         (company-nxml)
+(setq company-backends '((company-nxml)
                          (company-css)
                          (company-semantic)
                          (company-capf)
@@ -33,6 +32,7 @@
                          (company-oddmuse)
                          (company-files)
                          (company-dabbrev)
+                         (company-tern)
                          (company-inf-ruby)
                          (company-robe)))
 
