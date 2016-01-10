@@ -1,6 +1,5 @@
 (require 'yasnippet)
 
-(setq yas-snippet-dirs '("~/.emacs.d/snippets"))
 ;; Use only own snippets, do not use bundled ones
 (yas-global-mode 1)
 
