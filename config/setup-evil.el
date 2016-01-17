@@ -116,7 +116,7 @@
 
 (defun smart-start-repl ()
   (interactive)
-  (cond ((eq major-mode 'js2-mode) (nodejs-repl))
+  (cond ((eq major-mode 'js2-mode) (babel-repl))
         ((or (eq major-mode 'enh-ruby-mode) (eq major-mode 'ruby-mode))
          (progn (inf-ruby-console-auto) (robe-start)))
         ((eq major-mode 'python-mode) (elpy-shell-switch-to-shell))
