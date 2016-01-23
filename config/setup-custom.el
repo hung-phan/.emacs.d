@@ -18,6 +18,10 @@
 (colorvisa/set-up 'which-key
   (which-key-mode))
 
+;; fix tramp error
+(setq tramp-ssh-controlmaster-options
+      "-o ControlMaster=auto -o ControlPath='tramp.%%C' -o ControlPersist=no") 
+
 ;; undo tree
 (colorvisa/set-up 'undo-tree
   (setq undo-tree-mode-lighter "")
