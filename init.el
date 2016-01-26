@@ -90,6 +90,8 @@
     markdown-mode        ;; markdown
     markdown-mode+
 
+    dash-at-point        ;; dash-at-point
+
     org
     org-trello           ;; trello mode
     org-present
