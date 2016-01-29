@@ -20,7 +20,6 @@
                 cider-repl-mode
                 diff-mode
                 ediff-mode
-                org-mode
                 dired-mode
                 wdired-mode
                 magit-mode
