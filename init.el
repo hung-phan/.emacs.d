@@ -57,6 +57,7 @@
     paredit              ;; minor mode for editing parentheses
     paredit-everywhere
     textmate
+    anzu
 
     god-mode
     evil-god-state
@@ -170,6 +171,7 @@
 (require 'setup-yasnippet)
 (require 'setup-autocomplete)
 (require 'setup-org)
+(require 'setup-anzu)
 
 (require 'setup-magit)
 (require 'setup-gitgutter)
