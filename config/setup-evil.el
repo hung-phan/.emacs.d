@@ -13,6 +13,7 @@
 
 ;;; default state
 (dolist (mode '(comint-mode
+                flycheck-error-list-mode
                 eshell-mode
                 shell-mode
                 nodejs-repl-mode
@@ -159,9 +160,8 @@
 (define-key evil-normal-state-map (kbd "SPC /") 'helm-ag-project-root)
 (define-key evil-normal-state-map (kbd "SPC v s") 'git-gutter:stage-hunk)
 (define-key evil-normal-state-map (kbd "SPC v r") 'git-gutter:revert-hunk)
-(colorvisa/set-up 'move-text
-  (define-key evil-normal-state-map (kbd "J") 'move-text-down)
-  (define-key evil-normal-state-map (kbd "K") 'move-text-up))
+(define-key evil-normal-state-map (kbd "J") 'move-text-down)
+(define-key evil-normal-state-map (kbd "K") 'move-text-up)
 (define-key evil-normal-state-map (kbd "C-e") (lambda () (interactive) (evil-scroll-line-down 8)))
 (define-key evil-normal-state-map (kbd "C-y") (lambda () (interactive) (evil-scroll-line-up 8)))
 
