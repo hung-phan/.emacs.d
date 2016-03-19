@@ -97,8 +97,6 @@
     org-trello           ;; trello mode
     org-present
 
-    golden-ratio         ;; auto resize window by golden ratio
-
     helm                 ;; incremental completion and selection
     helm-swoop           ;; search functionality
     helm-descbinds       ;; A helm frontend for describe-bindings.
@@ -164,7 +162,6 @@
 (require 'setup-flx)
 (require 'setup-flycheck)
 (require 'setup-paredit)
-(require 'setup-golden-ratio)
 (require 'setup-helm)
 (require 'setup-dired)
 (require 'setup-yasnippet)
