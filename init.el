@@ -42,6 +42,7 @@
 
     which-key
     windmove             ;; fast window jum
+    switch-window
     escreen              ;; multiple tab like vim
     undo-tree            ;; undo tree visualization
     nyan-mode            ;; nyan nyan

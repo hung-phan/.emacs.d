@@ -18,6 +18,10 @@
 (colorvisa/set-up 'which-key
   (which-key-mode))
 
+;; switch-window
+(colorvisa/set-up 'switch-window
+  (global-set-key (kbd "C-x o") 'switch-window))
+
 ;; fix tramp error
 (setq tramp-ssh-controlmaster-options
       "-o ControlMaster=auto -o ControlPath='tramp.%%C' -o ControlPersist=no")
