@@ -42,8 +42,6 @@
   (flycheck-clear-idle-change-timer)
   (flycheck-buffer-automatically 'idle-change))
 
-(add-hook 'after-init-hook #'global-flycheck-mode)
-
 ;; disable jshint since we prefer eslint checking
 (setq-default flycheck-disabled-checkers
               (append flycheck-disabled-checkers
@@ -58,5 +56,7 @@
 (flycheck-add-mode 'javascript-eslint 'js2-mode)
 (flycheck-add-mode 'javascript-eslint 'js-mode)
 (flycheck-add-mode 'javascript-eslint 'web-mode)
+
+(global-flycheck-mode)
 
 (provide 'setup-flycheck)
