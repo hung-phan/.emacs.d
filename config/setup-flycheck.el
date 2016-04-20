@@ -57,6 +57,9 @@
 (flycheck-add-mode 'javascript-eslint 'js-mode)
 (flycheck-add-mode 'javascript-eslint 'web-mode)
 
+;; relative executable eslint
+(setq flycheck-javascript-eslint-executable "eslint-project-relative")
+
 (global-flycheck-mode)
 
 (provide 'setup-flycheck)
