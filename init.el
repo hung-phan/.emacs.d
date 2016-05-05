@@ -124,6 +124,7 @@
     clojure-mode
     clojure-test-mode
     cider                ;; clojure repl
+    clj-refactor
 
     jade-mode
     stylus-mode
