@@ -1,7 +1,8 @@
 (require 'comint)
 
 ;; load theme
-(load-theme 'dracula t)
+(colorvisa/set-up 'dracula-theme
+  (load-theme 'dracula t))
 
 ;; smart mode line
 (colorvisa/set-up 'smart-mode-line
