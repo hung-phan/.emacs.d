@@ -87,6 +87,7 @@
 
 (require 'flycheck-clojure)
 (add-hook 'clojure-mode-hook (lambda () (flycheck-mode 1)))
+(add-hook 'clojurescript-mode-hook (lambda () (flycheck-mode 1)))
 
 ;; TODO: Loot more stuff from:
 ;;  - https://github.com/overtone/emacs-live/blob/master/packs/dev/clojure-pack/config/paredit-conf.el

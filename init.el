@@ -121,6 +121,9 @@
     js2-mode             ;; improve js editing
     js2-refactor
 
+    company-ghc
+    haskell-mode
+
     clojure-mode
     clojure-test-mode
     cider                ;; clojure repl

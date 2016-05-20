@@ -106,7 +106,7 @@
              (python-shell-send-region (region-beginning) (region-end))
              (python-shell-send-region (line-beginning-position) (+ 1 (line-end-position)))))
 
-        ((eq major-mode 'clojure-mode)
+        ((or (eq major-mode 'clojure-mode) (eq major-mode 'clojurescript-mode))
          (progn
            (if (region-active-p)
              (cider-insert-region-in-repl (region-beginning) (region-end))
@@ -120,7 +120,7 @@
         ((or (eq major-mode 'enh-ruby-mode) (eq major-mode 'ruby-mode))
          (progn (inf-ruby-console-auto) (robe-start)))
         ((eq major-mode 'python-mode) (elpy-shell-switch-to-shell))
-        ((eq major-mode 'clojure-mode) (cider-jack-in))))
+        ((or (eq major-mode 'clojure-mode) (eq major-mode 'clojurescript-mode)) (cider-jack-in))))
 
 ;; -----------------------------------------------------------------------------
 ;; redefine key

@@ -33,6 +33,7 @@
                          (company-files)
                          (company-dabbrev)
                          (company-tern)
+                         (company-ghc)
                          (company-inf-ruby)
                          (company-robe)))
 

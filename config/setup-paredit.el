@@ -32,6 +32,7 @@
     (paredit-backward-kill-word)))
 
 (add-hook 'clojure-mode-hook (lambda () (paredit-mode 1)))
+(add-hook 'clojurescript-mode-hook (lambda () (paredit-mode 1)))
 (add-hook 'cider-repl-mode-hook (lambda () (paredit-mode 1)))
 (add-hook 'emacs-lisp-mode-hook (lambda () (paredit-mode 1)))
 
@@ -46,7 +47,7 @@
 
 ;; Change nasty paredit keybindings
 (defvar paredit-keybindings-remappings
-  '(("M-s"         "s-s"         paredit-splice-sexp)
+  '(("C-c C-k"     "s-s"         paredit-splice-sexp)
     ("M-<up>"      "s-<up>"      paredit-splice-sexp-killing-backward)
     ("M-<down>"    "s-<down>"    paredit-splice-sexp-killing-forward)
     ("C-<right>"   "s-<right>"   paredit-forward-slurp-sexp)
