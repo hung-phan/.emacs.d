@@ -4,6 +4,7 @@
 (require 'helm-descbinds)
 (require 'helm-projectile)
 (require 'helm-flycheck)
+(require 'helm-ag)
 
 ;;; Code:
 (colorvisa/in '(darwin)
@@ -13,6 +14,7 @@
 (setq projectile-enable-caching t)
 (helm-mode 1)
 (helm-descbinds-install)
+(custom-set-variables '(helm-ag-use-temp-buffer t))
 
 ;; set helm variables
 (setq
