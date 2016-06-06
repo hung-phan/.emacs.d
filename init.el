@@ -113,6 +113,7 @@
     dired-sort-menu
 
     tern
+    tide
     company-tern
     nodejs-repl
     babel-repl
@@ -141,8 +142,6 @@
 
     elpy                 ;; python
 
-    scala-mode2          ;; scala
-
     shell-command        ;; shell
     exec-path-from-shell
     multi-term
@@ -160,6 +159,7 @@
 
 (require 'setup-defaults)
 (require 'setup-custom)
+(require 'setup-tide)
 
 (require 'setup-smex)
 (require 'setup-ido)

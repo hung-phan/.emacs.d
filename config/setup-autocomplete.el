@@ -32,6 +32,7 @@
                          (company-oddmuse)
                          (company-files)
                          (company-dabbrev)
+                         (company-tide)
                          (company-tern)
                          (company-ghc)
                          (company-inf-ruby)
