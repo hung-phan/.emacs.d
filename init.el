@@ -129,6 +129,8 @@
     cider                ;; clojure repl
     clj-refactor
 
+    dockerfile-mode
+
     jade-mode
     stylus-mode
 
