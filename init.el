@@ -124,6 +124,9 @@
     company-ghc
     haskell-mode
 
+    scala-mode
+    ensime
+
     clojure-mode
     clojure-test-mode
     cider                ;; clojure repl
