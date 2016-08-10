@@ -3,7 +3,7 @@
 ;;; Code:
 (add-to-list 'load-path (or (file-name-directory #$) (car load-path)))
 
-;;;### (autoloads nil nil ("ido-hacks.el") (22439 64571 832054 0))
+;;;### (autoloads nil nil ("ido-hacks.el") (22443 16759 122431 0))
 
 ;;;***
 

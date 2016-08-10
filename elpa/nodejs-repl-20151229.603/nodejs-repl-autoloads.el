@@ -3,7 +3,7 @@
 ;;; Code:
 (add-to-list 'load-path (or (file-name-directory #$) (car load-path)))
 
-;;;### (autoloads nil "nodejs-repl" "nodejs-repl.el" (22439 64622
+;;;### (autoloads nil "nodejs-repl" "nodejs-repl.el" (22443 16940
 ;;;;;;  0 0))
 ;;; Generated autoloads from nodejs-repl.el
 
