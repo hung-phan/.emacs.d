@@ -18,8 +18,7 @@
                   ("org" . "http://orgmode.org/elpa/")
                   ("elpa" . "http://tromey.com/elpa/")
                   ("melpa-stable" . "http://stable.melpa.org/packages/")
-                  ("melpa" . "http://melpa.org/packages/")
-                  ("elpy" . "http://jorgenschaefer.github.io/packages/")))
+                  ("melpa" . "http://melpa.org/packages/")))
   (add-to-list 'package-archives source t))
 (package-initialize)
 
