@@ -3,7 +3,7 @@
 ;;; Code:
 (add-to-list 'load-path (or (file-name-directory #$) (car load-path)))
 
-;;;### (autoloads nil "babel-repl" "babel-repl.el" (22443 16941 0
+;;;### (autoloads nil "babel-repl" "babel-repl.el" (22444 9282 0
 ;;;;;;  0))
 ;;; Generated autoloads from babel-repl.el
 

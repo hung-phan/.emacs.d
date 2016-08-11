@@ -3,8 +3,8 @@
 ;;; Code:
 (add-to-list 'load-path (or (file-name-directory #$) (car load-path)))
 
-;;;### (autoloads nil "helm-descbinds" "helm-descbinds.el" (22443
-;;;;;;  16876 0 0))
+;;;### (autoloads nil "helm-descbinds" "helm-descbinds.el" (22444
+;;;;;;  9258 0 0))
 ;;; Generated autoloads from helm-descbinds.el
 
 (defvar helm-descbinds-mode nil "\

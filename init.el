@@ -144,8 +144,6 @@
     yaml-mode
     rspec-mode
 
-    elpy                 ;; python
-
     shell-command        ;; shell
     exec-path-from-shell
     multi-term
