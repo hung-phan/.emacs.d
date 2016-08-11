@@ -101,11 +101,6 @@
              (ruby-send-region (region-beginning) (region-end))
              (ruby-send-region (line-beginning-position) (+ 1 (line-end-position)))))
 
-        ((eq major-mode 'python-mode)
-         (if (region-active-p)
-             (python-shell-send-region (region-beginning) (region-end))
-             (python-shell-send-region (line-beginning-position) (+ 1 (line-end-position)))))
-
         ((or (eq major-mode 'clojure-mode) (eq major-mode 'clojurescript-mode))
          (progn
            (if (region-active-p)
@@ -119,7 +114,6 @@
   (cond ((eq major-mode 'js2-mode) (babel-repl))
         ((or (eq major-mode 'enh-ruby-mode) (eq major-mode 'ruby-mode))
          (progn (inf-ruby-console-auto) (robe-start)))
-        ((eq major-mode 'python-mode) (elpy-shell-switch-to-shell))
         ((or (eq major-mode 'clojure-mode) (eq major-mode 'clojurescript-mode)) (cider-jack-in))))
 
 ;; -----------------------------------------------------------------------------
