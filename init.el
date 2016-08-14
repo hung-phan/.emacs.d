@@ -136,6 +136,8 @@
     jade-mode
     stylus-mode
 
+    company-jedi         ;; python
+
     robe                 ;; ruby
     rvm
     enh-ruby-mode

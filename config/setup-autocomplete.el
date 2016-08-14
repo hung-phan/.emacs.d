@@ -36,7 +36,8 @@
                          (company-tern)
                          (company-ghc)
                          (company-inf-ruby)
-                         (company-robe)))
+                         (company-robe)
+                         (company-jedi)))
 
 (defun company-mode/backend-with-yas (backend)
   (if (or (not company-mode/enable-yas) (and (listp backend) (member 'company-yasnippet backend)))
