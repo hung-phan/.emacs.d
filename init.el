@@ -115,7 +115,6 @@
     tide
     company-tern
     nodejs-repl
-    babel-repl
     coffee-mode
     json-mode
     js2-mode             ;; improve js editing
