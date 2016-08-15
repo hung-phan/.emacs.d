@@ -89,12 +89,7 @@
          (cond ((get-buffer-process "*nodejs*")
                 (if (region-active-p)
                     (send-region-to-nodejs-repl-process (region-beginning) (region-end))
-                    (send-region-to-nodejs-repl-process (line-beginning-position) (+ 1 (line-end-position)))))
-               ;; if exists buffer babel-shell, then sends commands to babel-shell buffer
-               ((get-buffer-process "*babel-shell*")
-                (if (region-active-p)
-                    (babel-repl-send-region (region-beginning) (region-end))
-                    (babel-repl-send-region (line-beginning-position) (+ 1 (line-end-position)))))))
+                    (send-region-to-nodejs-repl-process (line-beginning-position) (+ 1 (line-end-position)))))))
 
         ((or (eq major-mode 'enh-ruby-mode) (eq major-mode 'ruby-mode))
          (if (region-active-p)
@@ -111,8 +106,7 @@
 
 (defun smart-start-repl ()
   (interactive)
-  (cond ((eq major-mode 'js2-mode) (babel-repl))
-        ((or (eq major-mode 'enh-ruby-mode) (eq major-mode 'ruby-mode))
+  (cond ((or (eq major-mode 'enh-ruby-mode) (eq major-mode 'ruby-mode))
          (progn (inf-ruby-console-auto) (robe-start)))
         ((or (eq major-mode 'clojure-mode) (eq major-mode 'clojurescript-mode)) (cider-jack-in))))
 

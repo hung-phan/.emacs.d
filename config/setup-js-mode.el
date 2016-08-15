@@ -1,5 +1,4 @@
 (require 'nodejs-repl)
-(require 'babel-repl)
 (require 'setup-tide)
 
 (defun send-region-to-nodejs-repl-process (start end)
