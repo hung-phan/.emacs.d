@@ -11,7 +11,7 @@
 (add-to-list 'auto-mode-alist '("\\.marko\\'" . web-mode))
 (add-to-list 'auto-mode-alist '("\\.html?\\'" . web-mode))
 (add-to-list 'auto-mode-alist '("/\\(views\\|html\\|theme\\|templates\\)/.*\\.php\\'" . web-mode))
-(add-to-list 'auto-mode-alist '("\\.tsx\\'" . web-mode))
+(add-to-list 'auto-mode-alist '("\\.tsx\\.jsx\\'" . web-mode))
 ;; make web-mode play nice with smartparens
 (setq web-mode-enable-auto-pairing nil)
 
@@ -21,6 +21,11 @@
 
   ;; auto insert and tag when typing </
   (setq nxml-slash-auto-complete-flag t))
+
+;; indentation
+(setq web-mode-markup-indent-offset 2)
+(setq web-mode-css-indent-offset 2)
+(setq web-mode-code-indent-offset 2)
 
 (add-hook 'web-mode-hook 'custom-web-mode-hook)
 (add-hook 'web-mode-hook
