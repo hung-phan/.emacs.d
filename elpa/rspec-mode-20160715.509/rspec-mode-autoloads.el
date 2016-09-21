@@ -1,9 +1,9 @@
 ;;; rspec-mode-autoloads.el --- automatically extracted autoloads
 ;;
 ;;; Code:
-(add-to-list 'load-path (or (file-name-directory #$) (car load-path)))
+(add-to-list 'load-path (directory-file-name (or (file-name-directory #$) (car load-path))))
 
-;;;### (autoloads nil "rspec-mode" "rspec-mode.el" (22473 46238 0
+;;;### (autoloads nil "rspec-mode" "rspec-mode.el" (22498 4572 0
 ;;;;;;  0))
 ;;; Generated autoloads from rspec-mode.el
 
@@ -44,8 +44,7 @@ Return true if the current buffer is a spec.
 
 ;;;***
 
-;;;### (autoloads nil nil ("rspec-mode-pkg.el") (22473 46238 954054
-;;;;;;  0))
+;;;### (autoloads nil nil ("rspec-mode-pkg.el") (22498 4572 0 0))
 
 ;;;***
 

@@ -1,9 +1,9 @@
 ;;; scala-mode-autoloads.el --- automatically extracted autoloads
 ;;
 ;;; Code:
-(add-to-list 'load-path (or (file-name-directory #$) (car load-path)))
+(add-to-list 'load-path (directory-file-name (or (file-name-directory #$) (car load-path))))
 
-;;;### (autoloads nil "scala-mode" "scala-mode.el" (22473 46206 0
+;;;### (autoloads nil "scala-mode" "scala-mode.el" (22498 4535 0
 ;;;;;;  0))
 ;;; Generated autoloads from scala-mode.el
 
@@ -36,7 +36,7 @@ When started, runs `scala-mode-hook'.
 ;;;;;;  "scala-mode-imenu.el" "scala-mode-indent.el" "scala-mode-lib.el"
 ;;;;;;  "scala-mode-map.el" "scala-mode-paragraph.el" "scala-mode-pkg.el"
 ;;;;;;  "scala-mode-prettify-symbols.el" "scala-mode-syntax.el")
-;;;;;;  (22473 46206 949952 0))
+;;;;;;  (22498 4535 0 0))
 
 ;;;***
 

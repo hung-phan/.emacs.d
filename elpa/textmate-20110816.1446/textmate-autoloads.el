@@ -1,14 +1,15 @@
 ;;; textmate-autoloads.el --- automatically extracted autoloads
 ;;
 ;;; Code:
-(add-to-list 'load-path (or (file-name-directory #$) (car load-path)))
+(add-to-list 'load-path (directory-file-name (or (file-name-directory #$) (car load-path))))
 
-;;;### (autoloads nil "textmate" "textmate.el" (22473 46041 0 0))
+;;;### (autoloads nil "textmate" "textmate.el" (22498 4390 0 0))
 ;;; Generated autoloads from textmate.el
 
 (defvar textmate-mode nil "\
 Non-nil if Textmate mode is enabled.
-See the command `textmate-mode' for a description of this minor mode.
+See the `textmate-mode' command
+for a description of this minor mode.
 Setting this variable directly does not take effect;
 either customize it (see the info node `Easy Customization')
 or call the function `textmate-mode'.")

@@ -1,9 +1,9 @@
 ;;; shell-command-autoloads.el --- automatically extracted autoloads
 ;;
 ;;; Code:
-(add-to-list 'load-path (or (file-name-directory #$) (car load-path)))
+(add-to-list 'load-path (directory-file-name (or (file-name-directory #$) (car load-path))))
 
-;;;### (autoloads nil "shell-command" "shell-command.el" (22473 46239
+;;;### (autoloads nil "shell-command" "shell-command.el" (22498 4573
 ;;;;;;  0 0))
 ;;; Generated autoloads from shell-command.el
 

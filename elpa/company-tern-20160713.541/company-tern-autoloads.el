@@ -1,9 +1,9 @@
 ;;; company-tern-autoloads.el --- automatically extracted autoloads
 ;;
 ;;; Code:
-(add-to-list 'load-path (or (file-name-directory #$) (car load-path)))
+(add-to-list 'load-path (directory-file-name (or (file-name-directory #$) (car load-path))))
 
-;;;### (autoloads nil "company-tern" "company-tern.el" (22473 46189
+;;;### (autoloads nil "company-tern" "company-tern.el" (22498 4511
 ;;;;;;  0 0))
 ;;; Generated autoloads from company-tern.el
 

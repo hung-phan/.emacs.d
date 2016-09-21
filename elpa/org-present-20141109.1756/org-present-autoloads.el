@@ -1,9 +1,9 @@
 ;;; org-present-autoloads.el --- automatically extracted autoloads
 ;;
 ;;; Code:
-(add-to-list 'load-path (or (file-name-directory #$) (car load-path)))
+(add-to-list 'load-path (directory-file-name (or (file-name-directory #$) (car load-path))))
 
-;;;### (autoloads nil "org-present" "org-present.el" (22473 46167
+;;;### (autoloads nil "org-present" "org-present.el" (22498 4469
 ;;;;;;  0 0))
 ;;; Generated autoloads from org-present.el
 

@@ -1,9 +1,9 @@
 ;;; marshal-autoloads.el --- automatically extracted autoloads
 ;;
 ;;; Code:
-(add-to-list 'load-path (or (file-name-directory #$) (car load-path)))
+(add-to-list 'load-path (directory-file-name (or (file-name-directory #$) (car load-path))))
 
-;;;### (autoloads nil "marshal" "marshal.el" (22473 46027 0 0))
+;;;### (autoloads nil "marshal" "marshal.el" (22498 4372 0 0))
 ;;; Generated autoloads from marshal.el
 
 (autoload 'marshal "marshal" "\
@@ -21,7 +21,7 @@
 
 \(fn NAME SUPERCLASS SLOTS &rest OPTIONS-AND-DOC)" nil t)
 
-(put 'marshal-defclass 'lisp-indent-function '2)
+(function-put 'marshal-defclass 'lisp-indent-function '2)
 
 ;;;***
 

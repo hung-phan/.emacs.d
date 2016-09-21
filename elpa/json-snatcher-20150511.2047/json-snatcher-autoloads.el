@@ -1,9 +1,9 @@
 ;;; json-snatcher-autoloads.el --- automatically extracted autoloads
 ;;
 ;;; Code:
-(add-to-list 'load-path (or (file-name-directory #$) (car load-path)))
+(add-to-list 'load-path (directory-file-name (or (file-name-directory #$) (car load-path))))
 
-;;;### (autoloads nil "json-snatcher" "json-snatcher.el" (22473 46191
+;;;### (autoloads nil "json-snatcher" "json-snatcher.el" (22498 4513
 ;;;;;;  0 0))
 ;;; Generated autoloads from json-snatcher.el
 

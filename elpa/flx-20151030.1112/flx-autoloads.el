@@ -1,9 +1,9 @@
 ;;; flx-autoloads.el --- automatically extracted autoloads
 ;;
 ;;; Code:
-(add-to-list 'load-path (or (file-name-directory #$) (car load-path)))
+(add-to-list 'load-path (directory-file-name (or (file-name-directory #$) (car load-path))))
 
-;;;### (autoloads nil nil ("flx.el") (22473 46075 437871 0))
+;;;### (autoloads nil nil ("flx.el") (22498 4424 0 0))
 
 ;;;***
 

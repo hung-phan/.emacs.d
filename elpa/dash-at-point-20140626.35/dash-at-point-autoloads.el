@@ -1,9 +1,9 @@
 ;;; dash-at-point-autoloads.el --- automatically extracted autoloads
 ;;
 ;;; Code:
-(add-to-list 'load-path (or (file-name-directory #$) (car load-path)))
+(add-to-list 'load-path (directory-file-name (or (file-name-directory #$) (car load-path))))
 
-;;;### (autoloads nil "dash-at-point" "dash-at-point.el" (22473 46088
+;;;### (autoloads nil "dash-at-point" "dash-at-point.el" (22498 4435
 ;;;;;;  0 0))
 ;;; Generated autoloads from dash-at-point.el
 
