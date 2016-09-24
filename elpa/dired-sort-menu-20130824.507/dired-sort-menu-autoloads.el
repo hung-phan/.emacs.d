@@ -3,8 +3,8 @@
 ;;; Code:
 (add-to-list 'load-path (directory-file-name (or (file-name-directory #$) (car load-path))))
 
-;;;### (autoloads nil "dired-sort-menu" "dired-sort-menu.el" (22498
-;;;;;;  4491 0 0))
+;;;### (autoloads nil "dired-sort-menu" "dired-sort-menu.el" (22501
+;;;;;;  53805 0 0))
 ;;; Generated autoloads from dired-sort-menu.el
 
 (let ((loads (get 'dired-sort-menu 'custom-loads))) (if (member '"dired-sort-menu" loads) nil (put 'dired-sort-menu 'custom-loads (cons '"dired-sort-menu" loads))))
