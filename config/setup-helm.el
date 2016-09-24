@@ -14,7 +14,10 @@
 (setq projectile-enable-caching t)
 (helm-mode 1)
 (helm-descbinds-install)
-(custom-set-variables '(helm-ag-use-temp-buffer t))
+(custom-set-variables
+ '(helm-ag-base-command "ag --nocolor --nogroup --ignore-case")
+ '(helm-ag-command-option "--all-text")
+ '(helm-ag-insert-at-point 'symbol))
 
 ;; set helm variables
 (setq
