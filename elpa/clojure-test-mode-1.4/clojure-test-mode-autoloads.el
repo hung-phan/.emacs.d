@@ -4,7 +4,7 @@
 (add-to-list 'load-path (directory-file-name (or (file-name-directory #$) (car load-path))))
 
 ;;;### (autoloads nil "clojure-test-mode" "clojure-test-mode.el"
-;;;;;;  (22501 53875 0 0))
+;;;;;;  (22637 53188 0 0))
 ;;; Generated autoloads from clojure-test-mode.el
 
 (autoload 'clojure-test-mode "clojure-test-mode" "\

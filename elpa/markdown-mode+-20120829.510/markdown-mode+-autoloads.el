@@ -3,8 +3,8 @@
 ;;; Code:
 (add-to-list 'load-path (directory-file-name (or (file-name-directory #$) (car load-path))))
 
-;;;### (autoloads nil "markdown-mode+" "markdown-mode+.el" (22501
-;;;;;;  53687 0 0))
+;;;### (autoloads nil "markdown-mode+" "markdown-mode+.el" (22637
+;;;;;;  52914 0 0))
 ;;; Generated autoloads from markdown-mode+.el
 
 (autoload 'markdown-export-latex "markdown-mode+" "\
@@ -42,7 +42,7 @@ Process file with multimarkdown, copy it to the clipboard, and paste in safari's
 
 ;;;***
 
-;;;### (autoloads nil nil ("markdown-mode+-pkg.el") (22501 53687
+;;;### (autoloads nil nil ("markdown-mode+-pkg.el") (22637 52914
 ;;;;;;  0 0))
 
 ;;;***

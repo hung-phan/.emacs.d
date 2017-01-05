@@ -94,7 +94,6 @@
     dash-at-point        ;; dash-at-point
 
     org
-    org-trello           ;; trello mode
     org-present
 
     helm                 ;; incremental completion and selection
@@ -193,26 +192,3 @@
 (require 'setup-mappings)
 
 (provide 'init)
-(custom-set-variables
- ;; custom-set-variables was added by Custom.
- ;; If you edit it by hand, you could mess it up, so be careful.
- ;; Your init file should contain only one such instance.
- ;; If there is more than one, they won't work right.
- '(flycheck-display-errors-function (function flycheck-pos-tip-error-messages))
- '(helm-ag-use-temp-buffer t)
- '(org-trello-current-prefix-keybinding "C-c o")
- '(package-selected-packages
-   (quote
-    (restclient multi-term exec-path-from-shell shell-command rspec-mode yaml-mode enh-ruby-mode rvm robe company-jedi stylus-mode jade-mode dockerfile-mode clj-refactor clojure-test-mode ensime scala-mode company-ghc js2-mode json-mode coffee-mode nodejs-repl company-tern tide tern dired-sort-menu dired-hacks-utils dired+ dired-details+ dired-details ac-helm helm-ag helm-flycheck helm-projectile helm-descbinds helm-swoop helm org-present org-trello dash-at-point markdown-mode+ markdown-mode web-mode scss-mode less-css-mode haml-mode slim-mode smex ido-hacks ido-ubiquitous flx-ido flx company yasnippet flycheck-clojure flycheck-pos-tip flycheck evil-matchit evil-surround evil-leader evil-god-state god-mode anzu textmate paredit-everywhere paredit expand-region move-text multiple-cursors ace-jump-mode rainbow-delimiters rainbow-mode smart-mode-line nyan-mode undo-tree escreen switch-window which-key gist git-timemachine git-gutter magit dash s)))
- '(term-default-bg-color "#000000")
- '(term-default-fg-color "#dddd00"))
-(custom-set-faces
- ;; custom-set-faces was added by Custom.
- ;; If you edit it by hand, you could mess it up, so be careful.
- ;; Your init file should contain only one such instance.
- ;; If there is more than one, they won't work right.
- '(company-scrollbar-bg ((t (:background "#3d4053"))))
- '(company-scrollbar-fg ((t (:background "#323544"))))
- '(company-tooltip ((t (:inherit default :background "#2c2e3b"))))
- '(company-tooltip-common ((t (:inherit font-lock-constant-face))))
- '(company-tooltip-selection ((t (:inherit font-lock-function-name-face)))))

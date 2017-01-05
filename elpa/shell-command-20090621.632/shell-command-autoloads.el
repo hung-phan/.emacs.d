@@ -3,7 +3,7 @@
 ;;; Code:
 (add-to-list 'load-path (directory-file-name (or (file-name-directory #$) (car load-path))))
 
-;;;### (autoloads nil "shell-command" "shell-command.el" (22501 53899
+;;;### (autoloads nil "shell-command" "shell-command.el" (22637 53229
 ;;;;;;  0 0))
 ;;; Generated autoloads from shell-command.el
 
