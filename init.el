@@ -8,6 +8,7 @@
 ;; define some load path here
 ;; -----------------------------------------------------------------------------
 (add-to-list 'load-path "~/.emacs.d/theme/")
+(add-to-list 'load-path "~/.emacs.d/libs/")
 (add-to-list 'load-path "~/.emacs.d/config/")
 
 ;; -----------------------------------------------------------------------------
@@ -157,6 +158,8 @@
 ;; Extra config
 ;; -----------------------------------------------------------------------------
 (require 'setup-util)
+
+(require 'prettier-js)
 
 (require 'setup-defaults)
 (require 'setup-custom)
