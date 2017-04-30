@@ -3,7 +3,7 @@
 ;;; Code:
 (add-to-list 'load-path (directory-file-name (or (file-name-directory #$) (car load-path))))
 
-;;;### (autoloads nil "sws-mode" "sws-mode.el" (22705 4884 0 0))
+;;;### (autoloads nil "sws-mode" "sws-mode.el" (22790 7297 0 0))
 ;;; Generated autoloads from sws-mode.el
 
 (autoload 'sws-mode "sws-mode" "\
