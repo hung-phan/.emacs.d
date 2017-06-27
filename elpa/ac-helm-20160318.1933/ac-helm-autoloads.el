@@ -3,7 +3,7 @@
 ;;; Code:
 (add-to-list 'load-path (directory-file-name (or (file-name-directory #$) (car load-path))))
 
-;;;### (autoloads nil "ac-helm" "ac-helm.el" (22790 7235 0 0))
+;;;### (autoloads nil "ac-helm" "ac-helm.el" (22866 27743 0 0))
 ;;; Generated autoloads from ac-helm.el
 
 (autoload 'ac-complete-with-helm "ac-helm" "\

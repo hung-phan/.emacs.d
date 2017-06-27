@@ -3,7 +3,7 @@
 ;;; Code:
 (add-to-list 'load-path (directory-file-name (or (file-name-directory #$) (car load-path))))
 
-;;;### (autoloads nil "helm-flycheck" "helm-flycheck.el" (22790 7231
+;;;### (autoloads nil "helm-flycheck" "helm-flycheck.el" (22866 27739
 ;;;;;;  0 0))
 ;;; Generated autoloads from helm-flycheck.el
 

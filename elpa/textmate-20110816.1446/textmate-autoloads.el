@@ -3,7 +3,7 @@
 ;;; Code:
 (add-to-list 'load-path (directory-file-name (or (file-name-directory #$) (car load-path))))
 
-;;;### (autoloads nil "textmate" "textmate.el" (22790 7145 0 0))
+;;;### (autoloads nil "textmate" "textmate.el" (22866 27634 0 0))
 ;;; Generated autoloads from textmate.el
 
 (defvar textmate-mode nil "\

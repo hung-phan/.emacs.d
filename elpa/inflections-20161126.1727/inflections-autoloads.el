@@ -3,7 +3,7 @@
 ;;; Code:
 (add-to-list 'load-path (directory-file-name (or (file-name-directory #$) (car load-path))))
 
-;;;### (autoloads nil "inflections" "inflections.el" (22790 7291
+;;;### (autoloads nil "inflections" "inflections.el" (22866 27817
 ;;;;;;  0 0))
 ;;; Generated autoloads from inflections.el
 

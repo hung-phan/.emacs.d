@@ -3,7 +3,7 @@
 ;;; Code:
 (add-to-list 'load-path (directory-file-name (or (file-name-directory #$) (car load-path))))
 
-;;;### (autoloads nil "stylus-mode" "stylus-mode.el" (22790 7297
+;;;### (autoloads nil "stylus-mode" "stylus-mode.el" (22866 27824
 ;;;;;;  0 0))
 ;;; Generated autoloads from stylus-mode.el
 
