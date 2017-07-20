@@ -1,5 +1,4 @@
 (require 'ido)
-(require 'ido-ubiquitous)
 (require 'ido-hacks)
 
 ;; -----------------------------------------------------------------------------
@@ -7,7 +6,6 @@
 ;; -----------------------------------------------------------------------------
 (ido-mode t)
 (ido-everywhere 1)
-(ido-ubiquitous-mode 1)
 
 ;; -----------------------------------------------------------------------------
 ;; Set buffer separator in the mini buffer when press C-x b (ido-switch-buffer)

@@ -4,7 +4,7 @@
 (add-to-list 'load-path (directory-file-name (or (file-name-directory #$) (car load-path))))
 
 ;;;### (autoloads nil "paredit-everywhere" "paredit-everywhere.el"
-;;;;;;  (22866 27633 0 0))
+;;;;;;  (22896 19354 0 0))
 ;;; Generated autoloads from paredit-everywhere.el
 
 (autoload 'paredit-everywhere-mode "paredit-everywhere" "\

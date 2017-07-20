@@ -79,26 +79,6 @@
              (lambda (output)
                (replace-regexp-in-string "\033\\[[0-9]+[A-Z]" "" output)))
 
-(custom-set-variables
- ;; custom-set-variables was added by Custom.
- ;; If you edit it by hand, you could mess it up, so be careful.
- ;; Your init file should contain only one such instance.
- ;; If there is more than one, they won't work right.
- '(flycheck-display-errors-function (function flycheck-pos-tip-error-messages))
- '(helm-ag-insert-at-point (quote symbol))
- '(helm-ag-use-temp-buffer t)
- '(package-selected-packages
-   (quote (restclient multi-term exec-path-from-shell shell-command rspec-mode yaml-mode enh-ruby-mode rvm robe company-jedi stylus-mode
-                      jade-mode dockerfile-mode clj-refactor clojure-test-mode ensime scala-mode company-ghc js2-mode json-mode
-                      coffee-mode nodejs-repl company-tern tide tern dired-sort-menu dired-hacks-utils dired+ dired-details+ dired-details
-                      ac-helm helm-ag helm-flycheck helm-projectile helm-descbinds helm-swoop helm org-present dash-at-point markdown-mode+
-                      markdown-mode web-mode scss-mode less-css-mode haml-mode slim-mode smex ido-hacks ido-ubiquitous flx-ido
-                      flx company yasnippet flycheck-clojure flycheck-pos-tip flycheck evil-matchit evil-surround evil-leader evil-god-state
-                      god-mode anzu textmate paredit-everywhere paredit expand-region move-text multiple-cursors ace-jump-mode rainbow-delimiters
-                      rainbow-mode smart-mode-line nyan-mode undo-tree escreen switch-window which-key gist git-timemachine git-gutter magit dash s)))
- '(term-default-bg-color "#000000")
- '(term-default-fg-color "#dddd00"))
-
 (custom-set-faces
  ;; custom-set-faces was added by Custom.
  ;; If you edit it by hand, you could mess it up, so be careful.
