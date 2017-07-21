@@ -117,6 +117,7 @@
     nodejs-repl
     json-mode
     js2-mode             ;; improve js editing
+    indium
 
     company-ghc
     haskell-mode
@@ -166,7 +167,7 @@
  '(helm-ag-use-temp-buffer t)
  '(package-selected-packages
    (quote
-    (restclient multi-term exec-path-from-shell shell-command rspec-mode yaml-mode enh-ruby-mode rvm robe company-jedi stylus-mode jade-mode dockerfile-mode clj-refactor clojure-test-mode ensime scala-mode company-ghc js2-mode json-mode nodejs-repl company-tern tide tern dired-sort-menu dired-hacks-utils dired+ dired-details+ dired-details ac-helm helm-ag helm-flycheck helm-projectile helm-descbinds helm-swoop helm org-present dash-at-point markdown-mode+ markdown-mode web-mode scss-mode less-css-mode haml-mode slim-mode smex ido-hacks ido-ubiquitous flx-ido flx company yasnippet flycheck-clojure flycheck-pos-tip flycheck evil-matchit evil-surround evil-leader evil-god-state god-mode anzu textmate paredit-everywhere paredit expand-region move-text multiple-cursors ace-jump-mode rainbow-delimiters rainbow-mode smart-mode-line nyan-mode undo-tree escreen switch-window which-key gist git-timemachine git-gutter magit dash s)))
+    (restclient multi-term exec-path-from-shell shell-command rspec-mode yaml-mode enh-ruby-mode rvm robe company-jedi stylus-mode jade-mode dockerfile-mode clj-refactor clojure-test-mode ensime scala-mode company-ghc js2-mode indium json-mode nodejs-repl company-tern tide tern dired-sort-menu dired-hacks-utils dired+ dired-details+ dired-details ac-helm helm-ag helm-flycheck helm-projectile helm-descbinds helm-swoop helm org-present dash-at-point markdown-mode+ markdown-mode web-mode scss-mode less-css-mode haml-mode slim-mode smex ido-hacks ido-ubiquitous flx-ido flx company yasnippet flycheck-clojure flycheck-pos-tip flycheck evil-matchit evil-surround evil-leader evil-god-state god-mode anzu textmate paredit-everywhere paredit expand-region move-text multiple-cursors ace-jump-mode rainbow-delimiters rainbow-mode smart-mode-line nyan-mode undo-tree escreen switch-window which-key gist git-timemachine git-gutter magit dash s)))
  '(term-default-bg-color "#000000")
  '(term-default-fg-color "#dddd00"))
 (custom-set-faces

@@ -3,7 +3,7 @@
 ;;; Code:
 (add-to-list 'load-path (directory-file-name (or (file-name-directory #$) (car load-path))))
 
-;;;### (autoloads nil nil ("ido-ubiquitous.el") (22896 19398 0 0))
+;;;### (autoloads nil nil ("ido-ubiquitous.el") (22897 27214 0 0))
 
 ;;;***
 

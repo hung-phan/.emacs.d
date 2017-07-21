@@ -3,7 +3,7 @@
 ;;; Code:
 (add-to-list 'load-path (directory-file-name (or (file-name-directory #$) (car load-path))))
 
-;;;### (autoloads nil "ensime" "ensime.el" (22896 19490 0 0))
+;;;### (autoloads nil "ensime" "ensime.el" (22897 27315 0 0))
 ;;; Generated autoloads from ensime.el
 
 (autoload 'ensime "ensime" "\
@@ -19,7 +19,7 @@ Read config file for settings. Then connect to an existing ENSIME server.
 ;;;***
 
 ;;;### (autoloads nil "ensime-auto-complete" "ensime-auto-complete.el"
-;;;;;;  (22896 19490 0 0))
+;;;;;;  (22897 27315 0 0))
 ;;; Generated autoloads from ensime-auto-complete.el
 
 (autoload 'ensime-ac-enable "ensime-auto-complete" "\
@@ -29,8 +29,8 @@ Read config file for settings. Then connect to an existing ENSIME server.
 
 ;;;***
 
-;;;### (autoloads nil "ensime-company" "ensime-company.el" (22896
-;;;;;;  19490 0 0))
+;;;### (autoloads nil "ensime-company" "ensime-company.el" (22897
+;;;;;;  27315 0 0))
 ;;; Generated autoloads from ensime-company.el
 
 (autoload 'ensime-company-enable "ensime-company" "\
@@ -40,7 +40,7 @@ Read config file for settings. Then connect to an existing ENSIME server.
 
 ;;;***
 
-;;;### (autoloads nil "ensime-ivy" "ensime-ivy.el" (22896 19490 0
+;;;### (autoloads nil "ensime-ivy" "ensime-ivy.el" (22897 27315 0
 ;;;;;;  0))
 ;;; Generated autoloads from ensime-ivy.el
 
@@ -56,7 +56,7 @@ Search ensime with ivy.
 
 ;;;***
 
-;;;### (autoloads nil "ensime-mode" "ensime-mode.el" (22896 19490
+;;;### (autoloads nil "ensime-mode" "ensime-mode.el" (22897 27315
 ;;;;;;  0 0))
 ;;; Generated autoloads from ensime-mode.el
 
@@ -78,8 +78,8 @@ ENSIME: The ENhanced Scala Interaction Mode for Emacs (minor-mode).
 ;;;;;;  "ensime-notes.el" "ensime-overlay.el" "ensime-pkg.el" "ensime-popup.el"
 ;;;;;;  "ensime-refactor.el" "ensime-sbt.el" "ensime-search.el" "ensime-semantic-highlight.el"
 ;;;;;;  "ensime-stacktrace.el" "ensime-startup.el" "ensime-ui.el"
-;;;;;;  "ensime-undo.el" "ensime-util.el" "ensime-vars.el") (22896
-;;;;;;  19490 0 0))
+;;;;;;  "ensime-undo.el" "ensime-util.el" "ensime-vars.el") (22897
+;;;;;;  27315 0 0))
 
 ;;;***
 
