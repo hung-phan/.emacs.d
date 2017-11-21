@@ -1,4 +1,11 @@
 (1
+ (zone-quotes .
+	      [(20170919 1825)
+	       ((emacs
+		 (24))
+		(cl-lib
+		 (0 5)))
+	       "A zone program to display quotes from a specific collection" single])
  (zone-nyan .
 	    [(0 2 2)
 	     ((esxml
@@ -460,11 +467,11 @@
 	     [(12)
 	      nil "A theme loosely based on Tron: Legacy colors" single])
  (transmission .
-	       [(0 10)
+	       [(0 12)
 		((emacs
 		  (24 4))
 		 (let-alist
-		  (1 0 3)))
+		  (1 0 5)))
 		"Interface to a Transmission session" single])
  (tracking .
 	   [(1 6)
@@ -575,7 +582,7 @@
 		 [(0 2)
 		  nil "A mode for SystemTap" single])
  (systemd .
-	  [(1 4 1)
+	  [(1 6)
 	   nil "Major mode for editing systemd units" tar])
  (syslog-mode .
 	      [(2 2)
@@ -1408,7 +1415,7 @@
 	   [(0 0 1)
 	    nil "get stuff from pinboard" single])
  (picpocket .
-	    [(30)
+	    [(38)
 	     ((emacs
 	       (24 4)))
 	     "Image viewer" single])
@@ -1577,7 +1584,7 @@
 		      [(1 0 5)
 		       nil "outline-minor-mode settings for emacs lisp" single])
  (outer-spaces .
-	       [(20161029 2230)
+	       [(20170825 2025)
 		nil "A minimalistic minor-mode to highlight redundant spaces" single])
  (otter-mode .
 	     [(1 2)
@@ -1683,7 +1690,7 @@
 	       (6 1)))
 	     "basic support for magit links" single])
  (org-journal .
-	      [(1 12 1)
+	      [(1 12 3)
 	       nil "a simple org-mode based journaling mode" single])
  (org-gnome .
 	    [(0 1)
@@ -1883,8 +1890,8 @@
 	     [(0 8 8)
 	      nil "Managing multiple terminal buffers in Emacs." single])
  (multi-project .
-		[(0 0 24)
-		 nil "Easily work with multiple projects." single])
+		[(0 0 25)
+		 nil "Find files, compile, search, and switch between" single])
  (multi-eshell .
 	       [(0 0 1)
 		nil "makes it easier to use multiple shells within emacs" single])
@@ -2221,6 +2228,9 @@
 	  ((eieio
 	    (1 3)))
 	  "logging library for Emacs" single])
+ (log-mode .
+	   [(0 0 2)
+	    nil "Navigate Log Error Messages" single])
  (load-theme-buffer-local .
 			  [(0 0 2)
 			   nil "Install emacs24 color themes by buffer." single])
@@ -2489,7 +2499,7 @@
 	  [(2927)
 	   nil "Adds support for IPython to python-mode.el" single])
  (insert-shebang .
-		 [(0 9 5)
+		 [(0 9 6)
 		  nil "Insert shebang line automatically." single])
  (inline-crypt .
 	       [(0 1 4)
@@ -2837,7 +2847,7 @@
 	   [(1 6)
 	    nil "goto last change" single])
  (gotham-theme .
-	       [(1 1 7)
+	       [(1 1 8)
 		nil "A very dark Emacs color theme." single])
  (gotests .
 	  [(0 0 2)
@@ -3561,12 +3571,17 @@
 		(1 4)))
 	      "View xkcd from Emacs" single])
  (emacs-sounds .
-	       [(20161211 1530)
+	       [(20171017 1215)
 		((sound-wav
 		  (20160725 724)))
 		"Sound effects for Emacs" single])
+ (emacs-new-buffer .
+		   [(20171026 1922)
+		    ((emacs
+		      (24)))
+		    "Quickly create new buffers to take notes and more" single])
  (emacs-home .
-	     [(20170712 2135)
+	     [(20170911 1835)
 	      ((emacs
 		(24))
 	       (cl-lib
@@ -3575,6 +3590,15 @@
  (emacs-droid .
 	      [(0 0 0)
 	       nil "Android application development tools for Emacs" single])
+ (emacs-daily-events .
+		     [(20170911 2235)
+		      ((emacs
+			(24))
+		       (cl-lib
+			(0 5))
+		       (emacs-visual-notifications
+			(20170908 2035)))
+		      "An Emacs package to notify you on specified daily occurring events" single])
  (emacs-cl .
 	   [(0 5)
 	    nil "Emacs Common Lisp" tar])
@@ -3741,6 +3765,9 @@
  (ecb .
       [(2 40)
        nil "Emacs Code Browser" tar])
+ (eagle-eye .
+	    [(20170823 2205)
+	     nil "A utility to zoom-in and zoom-out while editing text" single])
  (dynamic-fonts .
 		[(0 6 4)
 		 ((font-utils
@@ -3751,7 +3778,7 @@
 		   (0 2 3)))
 		 "Set faces based on available fonts" single])
  (dxr .
-      [(2 2)
+      [(2 4)
        nil "Convenient access to a DXR server" single])
  (durendal .
 	   [(0 2)
@@ -3777,7 +3804,7 @@
 	       [(0 2 2)
 		nil "Aspell extra dictionary for Drupal" tar])
  (drupal-mode .
-	      [(0 7 1)
+	      [(0 7 3)
 	       ((php-mode
 		 (1 5 0)))
 	       "Advanced minor mode for Drupal development" tar])
@@ -3903,13 +3930,17 @@
        [(2 11 0)
 	nil "A modern list library for Emacs" single])
  (dart-mode .
-	    [(0 14)
-	     ((cl-lib
+	    [(1 0 2)
+	     ((emacs
+	       (24 5))
+	      (cl-lib
 	       (0 5))
 	      (dash
 	       (2 10 0))
 	      (flycheck
-	       (0 23)))
+	       (0 23))
+	      (s
+	       (1 11)))
 	     "Major mode for editing Dart files" single])
  (d-mode .
 	 [(2 0 4)
