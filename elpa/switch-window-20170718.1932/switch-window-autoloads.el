@@ -3,7 +3,7 @@
 ;;; Code:
 (add-to-list 'load-path (directory-file-name (or (file-name-directory #$) (car load-path))))
 
-;;;### (autoloads nil "switch-window" "switch-window.el" (23059 37734
+;;;### (autoloads nil "switch-window" "switch-window.el" (23118 63172
 ;;;;;;  0 0))
 ;;; Generated autoloads from switch-window.el
 
@@ -53,7 +53,7 @@ Select a window then swap it buffer with current window's buffer.
 ;;;***
 
 ;;;### (autoloads nil nil ("switch-window-asciiart.el" "switch-window-mvborder.el"
-;;;;;;  "switch-window-pkg.el") (23059 37734 0 0))
+;;;;;;  "switch-window-pkg.el") (23118 63172 0 0))
 
 ;;;***
 

@@ -1,2 +1,2 @@
 ;;; -*- no-byte-compile: t -*-
-(define-package "tern" "20170925.1333" "Tern-powered JavaScript integration" '((json "1.2") (cl-lib "0.5") (emacs "24")) :commit "5c395b5d696aad5a185724f56c74a7f83349f3bd" :url "http://ternjs.net/")
+(define-package "tern" "20170925.1333" "Tern-powered JavaScript integration" '((json "1.2") (cl-lib "0.5") (emacs "24")) :commit "ae83725819286d3f134a6b9956f1117b341e1040" :url "http://ternjs.net/")

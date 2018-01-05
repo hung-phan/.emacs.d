@@ -3,8 +3,8 @@
 ;;; Code:
 (add-to-list 'load-path (directory-file-name (or (file-name-directory #$) (car load-path))))
 
-;;;### (autoloads nil "evil-god-state" "evil-god-state.el" (23059
-;;;;;;  37754 0 0))
+;;;### (autoloads nil "evil-god-state" "evil-god-state.el" (23118
+;;;;;;  63198 0 0))
 ;;; Generated autoloads from evil-god-state.el
 
 (autoload 'evil-execute-in-god-state "evil-god-state" "\
